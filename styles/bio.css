@@ -1,3 +1,33 @@
-.footer__contact-details--name {
-  font-weight: bold;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+}
+.header__logo {
+  display: flex;
+}
+.header__logo-message {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.header__nav {
+  width: 100%;
+}
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-around;
+}
+.header__nav-item {
+  color: #E1E1E1;
+}
+.header__nav-item--active {
+  color: #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+}
+
+.hero-banner__background {
+  background-image: url(../assets/Images/hero-bio.jpg);
 }/*# sourceMappingURL=bio.css.map */
