@@ -1,2 +1,147 @@
 @use './partials/mixins' as *;
 @use './partials/variables' as *;
+
+// header
+
+.header{
+    
+    &__logo {
+
+    }
+
+    &__nav{
+
+    }
+
+    &__nav-list{
+
+    }
+
+    &__nav-item{
+
+    }
+}
+
+.hero-banner{
+
+    &__background{
+
+    }
+
+    &__title{
+
+    }
+
+}
+
+.site-body{
+
+}
+
+.about{
+
+    &__header{
+
+    }
+
+    &__heading{
+
+    }
+
+    &__img{
+
+    }
+
+    &__body{
+
+    }
+
+    &__quote{
+
+    }
+
+    &__subheading{
+
+    }
+
+
+}
+
+.gallery{
+
+    &__header{
+
+    }
+
+    &__heading{
+
+    }
+
+    &__img-section{
+
+    }
+
+    &__img{
+
+    }
+}
+
+.footer{
+
+    &__header{
+
+    }
+
+    &__heading{
+
+    }
+
+    &__social{
+
+    }
+
+    &__social-icon-list{
+
+    }
+
+    &__social-icon{
+
+    }
+
+    &__contact{
+
+    }
+
+    &__contact-info{
+
+    }
+
+    &__contact-details{
+
+    }
+
+    &__contact-details--name{
+
+    }
+
+    &__contact-details--link
+}
+
+.copy{
+
+    &__logo-section{
+
+    }
+
+    &__logo{
+
+    }
+
+    &__message-section{
+
+    }
+
+    &__message{
+        
+    }
+}
