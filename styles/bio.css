@@ -19,11 +19,6 @@
   margin: 0;
 }
 
-body img {
-  width: 100%;
-  height: auto;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -31,8 +26,19 @@ body img {
   background-color: #323232;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+}
 .header__logo {
   display: flex;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    margin: 1rem 2rem;
+  }
 }
 .header__logo-message {
   text-decoration: none;
@@ -43,6 +49,12 @@ body img {
 }
 .header__nav {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .header__nav {
+    width: auto;
+    padding: 0 1.5rem;
+  }
 }
 .header__nav-list {
   display: flex;
@@ -57,7 +69,8 @@ body img {
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  padding: 0.5rem;
+  padding: 1.75rem 0rem;
+  margin: 0 1.5rem;
 }
 .header__nav-item--active {
   color: #FFFFFF;
@@ -67,7 +80,7 @@ body img {
 
 .hero-banner {
   display: flex;
-  min-height: 22.5vh;
+  min-height: 60vh;
   width: 100%;
   background-image: url(../assets/Images/hero-bio.jpg);
   background-position: center;
@@ -89,22 +102,41 @@ body img {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+@media (min-width: 768px) {
+  .hero-banner__title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    padding-left: 1.5rem;
+  }
+}
 
 .about {
   background-color: #FFFFFF;
   margin: 1rem;
 }
+@media (min-width: 768px) {
+  .about {
+    margin: 2.25rem;
+  }
+}
 .about__heading {
+  color: #323232;
   font-family: reg-bold;
   font-size: 1.5rem;
   line-height: 2rem;
   margin-top: 1.5rem;
   padding-bottom: 1rem;
 }
+.about__img {
+  width: 100%;
+  height: auto;
+}
 .about__body {
+  color: #323232;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: regular;
+  margin: 1rem 0;
 }
 .about__quote {
   font-family: demi;
@@ -121,6 +153,67 @@ body img {
   background-color: #FFFFFF;
   margin: 1rem;
 }
+.gallery__heading {
+  font-family: reg-bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+.gallery__img-section {
+  display: inline-flex;
+  flex-direction: column;
+}
 .gallery__img {
   width: 100vw;
+  padding: 0.5rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1.5rem 1rem;
+}
+.footer__heading {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: demi;
+}
+.footer__social-icon-list {
+  margin: 1rem 0;
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+.footer__contact-info {
+  margin: 1rem 0;
+}
+.footer__contact-details {
+  color: #FFFFFF;
+  font-family: regular;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 0.5rem 0;
+}
+.footer__contact-details--name {
+  font-family: demi;
+}
+.footer__contact-details--link {
+  text-decoration: none;
+}
+
+.copy__logo-section {
+  margin-top: 3rem;
+}
+.copy__logo {
+  color: #FFFFFF;
+  font-family: regular;
+  font-size: 1.5rem;
+  line-height: 32px;
+}
+.copy__message {
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }/*# sourceMappingURL=bio.css.map */
