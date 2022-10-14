@@ -41,12 +41,8 @@
     margin: 1rem 2rem;
   }
 }
-.header__logo-message {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: regular;
+.header__logo-img {
+  padding: 0;
 }
 .header__nav {
   width: 100%;
@@ -55,6 +51,7 @@
   .header__nav {
     width: auto;
     padding: 0 1.5rem;
+    height: 71px;
   }
 }
 .header__nav-list {
@@ -65,22 +62,34 @@
   margin: 0;
 }
 .header__nav-item {
-  color: #E1E1E1;
   width: 100%;
   text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  padding: 1.75rem 0rem;
+  padding: 1rem 0rem;
 }
 @media (min-width: 768px) {
   .header__nav-item {
     margin: 0 2rem;
   }
 }
+.header__nav-link {
+  text-decoration: none;
+  color: #E1E1E1;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
 .header__nav-item--active {
   color: #FFFFFF;
   border-bottom: 3px solid #FFFFFF;
-  font-family: demi;
+  font-family: reg-bold;
+}
+
+.blank-space {
+  height: 6rem;
+}
+@media (min-width: 768px) {
+  .blank-space {
+    height: 4.4375rem;
+  }
 }
 
 .hero-banner {
@@ -90,6 +99,7 @@
   background-image: url(../assets/Images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
+  margin-top: 0;
 }
 .hero-banner__background {
   background-color: rgba(50, 50, 50, 0.5);
