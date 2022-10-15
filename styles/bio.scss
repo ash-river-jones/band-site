@@ -64,7 +64,8 @@
     &__nav-item{
         width: 100%;
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 1.5rem;
+        padding-bottom: 1rem;
 
         @include tablet{
             margin: 1.5rem 1rem 0rem 1rem;
@@ -74,10 +75,13 @@
     &__nav-link{
         text-decoration: none;
         color: $mercury;
-        @include m-subheader;
+        @include m-body;
+        
+        
 
         @include tablet{
-            @include dt-subheader;
+            @include dt-body;
+            font-family: reg-bold;
         }
         
     }
@@ -119,6 +123,9 @@
 
     &__title-section{
         margin: 1rem;
+        @include tablet{
+            margin: 2.25rem;
+        }
 
     }
 
