@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './typography'as *;
 
 @mixin tablet {
     @media (min-width: $tablet-breakpoint){
@@ -11,4 +12,76 @@
     @media (min-width: $desktop-breakpoint){
         @content;
     }
+}
+
+@mixin dt-page-header{
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: reg-bold;
+}
+
+@mixin dt-section-header{
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: reg-bold;
+}
+
+@mixin dt-subheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: demi;
+}
+
+@mixin dt-body {
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-family: regular;
+}
+
+@mixin dt-footer{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-family: regular;
+}
+
+@mixin dt-label-button {
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-family: reg-bold;
+}
+
+@mixin m-page-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: reg-bold;
+}
+
+@mixin m-section-header{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: reg-bold;
+}
+
+@mixin m-subheader {
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-family: demi;
+}
+
+@mixin m-body {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-family: regular;
+}
+
+@mixin m-footer {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-family: regular;
+}
+
+@mixin m-label-button {
+    font-size: .625rem;
+    line-height: 1.25rem;
+    font-family: reg-bold;
 }

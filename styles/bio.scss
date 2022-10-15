@@ -2,7 +2,6 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 
-// header
 
 * {
     font-family: regular;
@@ -27,7 +26,7 @@
 
     &__logo {
         display: flex;
-        padding-top: 1rem;
+        margin-top: 1rem;
         @include tablet{
         margin: 1rem 2rem;
         }
@@ -37,14 +36,14 @@
     }
 
     &__logo-img{
-        padding: 0;
+        margin: 0;
     }
 
     &__nav{
         width: 100%;
         @include tablet{
             width: auto;
-            padding: 0 1.5rem;
+            margin: 0 1.5rem;
             height: 71px;
         }
     }
@@ -52,26 +51,35 @@
     &__nav-list{
         display: flex;
         list-style: none;
-        padding: 0;
+        margin: 0;
         justify-content: space-around;
         margin: 0;
+
+        @include tablet{
+
+            height: 4.4375rem;
+        }
     }
 
     &__nav-item{
         width: 100%;
         text-align: center;
-        padding: 1rem 0rem;
+        margin-top: 3rem;
 
         @include tablet{
-            margin: 0 2rem;
+            margin: 1.5rem 1rem 0rem 1rem;
         }
     }
 
     &__nav-link{
         text-decoration: none;
         color: $mercury;
-        font-size: .875rem;
-        line-height: 1.375rem;
+        @include m-subheader;
+
+        @include tablet{
+            @include dt-subheader;
+        }
+        
     }
 
     &__nav-item--active{
@@ -79,6 +87,11 @@
         border-bottom: 3px solid $white;
         font-family: reg-bold;
     }
+
+    &__nav-link--inactive{
+        font-family: regular;
+    }
+
 }
 .blank-space{
     height: 6rem;
@@ -95,8 +108,6 @@
     background-image: url(../assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
-    // padding-top: 5.0625rem;
-    margin-top: 0;
 
     &__background{
         background-color: rgba($color: #323232, $alpha: 0.5);
@@ -107,21 +118,17 @@
     }
 
     &__title-section{
-        padding: 1rem;
+        margin: 1rem;
 
     }
 
     &__title{
         color: white;
         margin: 0;
-        font-family: demi;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        @include m-page-header;
 
         @include tablet{
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            padding-left: 1.5rem;
+            @include dt-page-header;
         }
     }
 
@@ -142,17 +149,19 @@
     }
 
     &__header{
-
+    
     }
 
     &__heading{
         color: $bandsite-black;
-        font-family: reg-bold;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        @include m-section-header;
         margin-top: 1.5rem;
-        padding-bottom: 1rem;
-
+        margin-bottom: 1rem;
+        @include tablet {
+            margin-top: 3rem;
+            margin-bottom: 2.25rem;
+            @include dt-section-header;
+        }
     }
 
     &__img{
@@ -160,27 +169,48 @@
     }
 
     &__body-section{
-
+        @include tablet {
+            margin: 0 4rem;
+        }
+    }
+    &__body-text{
+        @include tablet{
+            column-count: 2;
+            column-gap: 2.25rem;
+        }
     }
 
     &__body{
         color: $bandsite-black;
-        font-size: .8125rem;
-        line-height: 1.125rem;
-        font-family: regular;
+        @include m-body;
         margin: 1rem 0;
+        @include tablet{
+            @include dt-body;
+            margin-top: 0
+        }
         }
 
     &__quote{
-        font-family: demi;
-        font-size: .875rem;
-        line-height: 1.375rem;
+        @include m-subheader;
+        @include tablet{
+            @include dt-subheader;
+            margin-top: 1rem;
+        }
+    }
+
+    &__quote-author{
+        @include m-body;
+        @include tablet {
+            @include dt-body;
+            font-family: demi;
+        }
     }
 
     &__subheading{
-        font-family: demi;
-        font-size: .875rem;
-        line-height: 1.375rem;
+        @include m-subheader;
+        @include tablet{
+            @include dt-subheader;
+        }
 
     }
 
@@ -188,45 +218,72 @@
 }
 
 .gallery{
-    background-color:$white ;
-    margin: 1rem;
+    background-color:$alabaster ;
+    margin: 1rem 0;
+    @include tablet{
+        margin: 2.25rem 0;
+    }
 
     &__header{
-
+        padding: 1.5rem 1rem 1rem 1rem;
+        @include tablet{
+            padding: 3rem 2.25rem 2.25rem 2.25rem;
+        }
     }
 
     &__heading{
-        font-family: reg-bold;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        margin-top: 1.5rem;
+        @include m-section-header;
+        @include tablet{
+            @include dt-section-header;
+        }
     }
 
     &__img-section{
         display: inline-flex;
         flex-direction: column;
+        margin: 0 1rem;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.125rem;
+            // margin: 0 2.25rem 0 2.25rem;
+            
+
+        }
     }
 
     &__img{
-        width: 100vw;
-        padding: .5rem 0 ;
+        margin: .5rem 0 ;
         width: 100%;
         height: auto;
+        @include tablet{
+            width: 30%;
+            margin: 0;
+        }
     }
 }
 
 .footer{
     background-color: $bandsite-black;
     padding: 1.5rem 1rem;
-    &__header{
 
+    &__header{
+        @include tablet {
+            margin: 2.25rem;
+            display: flex;
+            
+        }
     }
 
     &__heading{
         color: $white;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-family: demi;
+        @include m-section-header;
+        @include tablet{
+            @include dt-section-header;
+            margin-right: 1rem;
+        }
     }
 
     &__social{
@@ -238,51 +295,82 @@
         display: flex;
         width: 40%;
         justify-content: space-between;
+        @include tablet {
+            display: flex;
+            gap: 1.125rem;
+            width: auto;
+            max-width: 28%;
+            justify-content: normal;
+        }
     }
 
     &__social-icon{
+        @include tablet{
+
+        }
+    }
+
+    &__logo-section{
+        margin-left: auto;
+    }
+
+    &__logo{
+        display:none;
+        @include tablet{
+            display: block;
+            margin-left: auto;
+        }
 
     }
 
     &__contact{
-
+        @include tablet{
+            margin: 0 2.25rem;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__contact-info{
         margin: 1rem 0;
-
+        @include tablet{
+            margin: 0;
+        }
     }
 
     &__contact-details{
         color: $white;
-        font-family: regular;
-        font-size: .8125rem;
-        line-height: 1.125rem;
-        padding: .5rem 0 ;
+        @include m-footer;
+        margin: .5rem 0 ;
+        @include tablet{
+            @include dt-footer;
+            margin: 0;
+        }
     }
 
     &__contact-details--name{
         font-family: demi;
-        // padding: 1rem 0;
     }
 
     &__contact-details--link{
         text-decoration: none;
-        // margin: 1rem 0 ;
     }
 }
 
 .copy{
-
+    @include tablet{
+        margin-left: 2.25rem;
+    }
+    
     &__logo-section{
         margin-top: 3rem;
     }
 
     &__logo{
         color: $white;
-        font-family: regular;
-        font-size: 1.5rem;
-        line-height: 32px;
+        @include tablet{
+            display: none;
+        }
     }
 
     &__message-section{
@@ -291,8 +379,9 @@
 
     &__message{
         color: $white;
-        font-size: .8125rem;
-        line-height: 1.125rem;
-
+        @include m-footer;
+        @include tablet{
+            @include dt-footer;
+        }
     }
 }
