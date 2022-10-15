@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite - Biography</title>
-    <link rel="stylesheet" href="./styles/bio.css" />
+    <link rel="stylesheet" href="./styles/bio.css">
 </head>
 <body>
 
     <!-- Header/Nav -->
     <header class="header">
-        <div class="header__logo"><a class="header__logo-link" href="./index.html"><img class="header__logo-img" src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo"></a></div>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item header__nav-item--active"><a href="./index.html" class="header__nav-link">Biography</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link--inactive">Shows</a></li>
-            </ul>
-        </nav>
+        <div class="header__wrapper">
+            <div class="header__logo"><a class="header__logo-link" href="./index.html"><img class="header__logo-img" src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo"></a></div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item header__nav-item--active"><a href="./index.html" class="header__nav-link">Biography</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link--inactive">Shows</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- below div is for pushing hero below the fixed header -->
@@ -25,9 +27,11 @@
 
     <!-- Hero Banner -->
     <section class="hero-banner">
-        <div class="hero-banner__background">
-            <div class="hero-banner__title-section">
-                <h1 class="hero-banner__title">The Bees Knees</h1>
+        <div class="hero-banner__wrapper">
+            <div class="hero-banner__background">
+                <div class="hero-banner__title-section">
+                    <h1 class="hero-banner__title">The Bees Knees</h1>
+                </div>
             </div>
         </div>
     </section>
@@ -68,59 +72,63 @@
     <!-- Main - Photo Gallery -->
 
         <section class="gallery">
-            <div class="gallery__header">
-                <h2 class="gallery__heading">Photo Gallery</h2>
-            </div>
-            <div class="gallery__img-section">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-1.jpg" alt="blue pink and orange lights at concert">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-2.jpg" alt="person dancing at concert">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-3.jpg" alt="multiple people raising hands at concert">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-4.jpg" alt="person raising hand at concert atop shoulders">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-5.jpg" alt="confetti cannon at concert">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-6.jpg" alt="vocalist singing into mic and raising hand to crowd">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-7.jpg" alt="concert goers await performance with colored lighting">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-8.jpg" alt="DJ mixing table with hand above">
-                <img class="gallery__img" src="./assets/Images/Photo-gallery-9.jpg" alt="concert goers with confetti raining down on them">
+            <div class="gallery__wrapper">
+                <div class="gallery__header">
+                    <h2 class="gallery__heading">Photo Gallery</h2>
+                </div>
+                <div class="gallery__img-section">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-1.jpg" alt="blue pink and orange lights at concert">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-2.jpg" alt="person dancing at concert">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-3.jpg" alt="multiple people raising hands at concert">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-4.jpg" alt="person raising hand at concert atop shoulders">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-5.jpg" alt="confetti cannon at concert">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-6.jpg" alt="vocalist singing into mic and raising hand to crowd">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-7.jpg" alt="concert goers await performance with colored lighting">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-8.jpg" alt="DJ mixing table with hand above">
+                    <img class="gallery__img" src="./assets/Images/Photo-gallery-9.jpg" alt="concert goers with confetti raining down on them">
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer__header">
-            <h2 class="footer__heading">Get in Touch</h2>
-            <div class="footer__social-icon-list">
-                <a href="https://www.instagram.com/"><img class="footer__social-icon" src="./assets/Icons/SVG/Icon-instagram.svg" alt="Instagram Icon"></a>
-                <a href="https://www.facebook.com/"><img class="footer__social-icon" src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook Icon"></a>
-                <a href="https://twitter.com/"><img class="footer__social-icon" src="./assets/Icons/SVG/Icon-twitter.svg" alt="Twitter Icon"></a>
+        <div class="footer__wrapper">
+            <div class="footer__header">
+                <h2 class="footer__heading">Get in Touch</h2>
+                <div class="footer__social-icon-list">
+                    <a href="https://www.instagram.com/"><img class="footer__social-icon" src="./assets/Icons/SVG/Icon-instagram.svg" alt="Instagram Icon"></a>
+                    <a href="https://www.facebook.com/"><img class="footer__social-icon" src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook Icon"></a>
+                    <a href="https://twitter.com/"><img class="footer__social-icon" src="./assets/Icons/SVG/Icon-twitter.svg" alt="Twitter Icon"></a>
+                </div>
+                <div class="footer__logo-section">
+                    <img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo" class="footer__logo">
+                </div>
             </div>
-            <div class="footer__logo-section">
-                <img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo" class="footer__logo">
+            <div class="footer__contact">
+                <div class="footer__contact-info">
+                    <p class="footer__contact-details footer__contact-details--name">Cam Adams<br>The Bees Knees Management</p>
+                    <p class="footer__contact-details"> 503 Brodway Penthouse,<br>New York, NY 10012, USA</p>
+                    <a class="footer__contact-details footer__contact-details--link" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+                </div>
+                <div class="footer__contact-info">
+                    <p class="footer__contact-details footer__contact-details--name">Pearl Gregg<br>Limitless Artist Group</p>
+                    <p class="footer__contact-details">Booking Agent for<br>US / South America / Japan</p>
+                    <a class="footer__contact-details footer__contact-details--link" href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a>
+                </div>
+                <div class="footer__contact-info">
+                    <p class="footer__contact-details footer__contact-details--name">Carson Whyte<br>ARCH Entertainment</p>
+                    <p class="footer__contact-details">Booking Agent for<br>UK / EU / AU</p>
+                    <a class="footer__contact-details footer__contact-details--link" href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a>
+                </div>
             </div>
-        </div>
-        <div class="footer__contact">
-            <div class="footer__contact-info">
-                <p class="footer__contact-details footer__contact-details--name">Cam Adams<br>The Bees Knees Management</p>
-                <p class="footer__contact-details"> 503 Brodway Penthouse,<br>New York, NY 10012, USA</p>
-                <a class="footer__contact-details footer__contact-details--link" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
-            </div>
-            <div class="footer__contact-info">
-                <p class="footer__contact-details footer__contact-details--name">Pearl Gregg<br>Limitless Artist Group</p>
-                <p class="footer__contact-details">Booking Agent for<br>US / South America / Japan</p>
-                <a class="footer__contact-details footer__contact-details--link" href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a>
-            </div>
-            <div class="footer__contact-info">
-                <p class="footer__contact-details footer__contact-details--name">Carson Whyte<br>ARCH Entertainment</p>
-                <p class="footer__contact-details">Booking Agent for<br>UK / EU / AU</p>
-                <a class="footer__contact-details footer__contact-details--link" href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a>
-            </div>
-        </div>
-        <div class="copy">
-            <div class="copy__logo-section">
-                <img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo" class="copy__logo">
-            </div>
-            <div class="copy__message-section">
-                <p class="copy__message">Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
+            <div class="copy">
+                <div class="copy__logo-section">
+                    <img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo" class="copy__logo">
+                </div>
+                <div class="copy__message-section">
+                    <p class="copy__message">Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
+                </div>
             </div>
         </div>
     </footer>

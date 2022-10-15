@@ -20,9 +20,6 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: #323232;
   width: 100%;
   position: fixed;
@@ -30,6 +27,23 @@
 @media (min-width: 768px) {
   .header {
     flex-direction: row;
+  }
+}
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header__wrapper {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1280px) {
+  .header__wrapper {
+    flex-direction: row;
+    width: 80rem;
+    margin-inline: auto;
   }
 }
 .header__logo {
@@ -109,19 +123,20 @@
     height: 4.4375rem;
   }
 }
-
 .hero-banner {
-  display: flex;
-  min-height: 45vh;
-  max-width: 100%;
   background-image: url(../assets/Images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
 }
+.hero-banner__wrapper {
+  display: flex;
+  min-height: 45vh;
+  width: auto;
+}
 .hero-banner__background {
   background-color: rgba(50, 50, 50, 0.5);
-  width: 100%;
-  display: flex;
+  width: 100vw;
+  display: inline-flex;
   align-items: center;
 }
 .hero-banner__title-section {
@@ -130,6 +145,12 @@
 @media (min-width: 768px) {
   .hero-banner__title-section {
     margin: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-banner__title-section {
+    width: 80rem;
+    margin-inline: auto;
   }
 }
 .hero-banner__title {
@@ -146,7 +167,6 @@
     font-family: reg-bold;
   }
 }
-
 .about {
   background-color: #FFFFFF;
   margin: 1rem;
@@ -154,6 +174,12 @@
 @media (min-width: 768px) {
   .about {
     margin: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about {
+    width: 80rem;
+    margin-inline: auto;
   }
 }
 .about__heading {
@@ -217,6 +243,11 @@
     margin-top: 1rem;
   }
 }
+@media (min-width: 1280px) {
+  .about__quote {
+    width: 70%;
+  }
+}
 .about__quote-author {
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -242,7 +273,6 @@
     font-family: demi;
   }
 }
-
 .gallery {
   background-color: #FAFAFA;
   margin: 1rem 0;
@@ -250,6 +280,12 @@
 @media (min-width: 768px) {
   .gallery {
     margin: 2.25rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__wrapper {
+    width: 80rem;
+    margin-inline: auto;
   }
 }
 .gallery__header {
@@ -297,10 +333,15 @@
     margin: 0;
   }
 }
-
 .footer {
   background-color: #323232;
   padding: 1.5rem 1rem;
+}
+@media (min-width: 1280px) {
+  .footer__wrapper {
+    width: 80rem;
+    margin-inline: auto;
+  }
 }
 @media (min-width: 768px) {
   .footer__header {

@@ -8,14 +8,21 @@
     box-sizing:border-box;
     padding: 0;
     margin: 0;
-        
+    
+    
 }
+
+// @include desktop{
+//     body{
+//         max-width: 80rem;
+//         margin: 0 auto;
+//     }
+// }
+
 
 
 .header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     background-color: $bandsite-black;
     width: 100%;
     position: fixed;
@@ -24,12 +31,27 @@
         flex-direction: row;
     }
 
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablet{
+            flex-direction: row;
+        }
+        @include desktop{
+            flex-direction: row;
+            width: 80rem;
+            margin-inline: auto;
+        }
+    }
+
     &__logo {
         display: flex;
         margin-top: 1rem;
         @include tablet{
         margin: 1rem 2rem;
         }
+        @include desktop{}
     }
 
     &__logo-link{
@@ -46,6 +68,9 @@
             margin: 0 1.5rem;
             height: 71px;
         }
+        @include desktop{
+
+        }
     }
 
     &__nav-list{
@@ -56,8 +81,10 @@
         margin: 0;
 
         @include tablet{
-
             height: 4.4375rem;
+        }
+        @include desktop{
+
         }
     }
 
@@ -69,6 +96,9 @@
 
         @include tablet{
             margin: 1.5rem 1rem 0rem 1rem;
+        }
+        @include desktop{
+
         }
     }
 
@@ -82,6 +112,9 @@
         @include tablet{
             @include dt-body;
             font-family: reg-bold;
+        }
+        @include desktop{
+
         }
         
     }
@@ -97,26 +130,36 @@
     }
 
 }
+
 .blank-space{
     height: 6rem;
 
     @include tablet{
         height: 4.4375rem;
     }
+    @include desktop{
+
+    }
 }
+
 .hero-banner{
-    
-    display: flex;
-    min-height: 45vh;
-    max-width: 100%;
     background-image: url(../assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
 
+    
+
+    
+    &__wrapper{
+        display: flex;
+        min-height: 45vh;
+        width: auto;
+    }
+
     &__background{
         background-color: rgba($color: #323232, $alpha: 0.5);
-        width: 100%;
-        display: flex;        
+        width: 100vw;
+        display: inline-flex;        
         align-items: center;
 
     }
@@ -125,6 +168,10 @@
         margin: 1rem;
         @include tablet{
             margin: 2.25rem;
+        }
+        @include desktop{
+            width: 80rem;
+            margin-inline: auto;
         }
 
     }
@@ -136,6 +183,10 @@
 
         @include tablet{
             @include dt-page-header;
+        }
+        @include desktop{
+            // max-width: 80rem;
+            // margin: auto;
         }
     }
 
@@ -154,6 +205,10 @@
     @include tablet{
         margin: 2.25rem;
     }
+    @include desktop{
+        width: 80rem;
+        margin-inline: auto;
+    }
 
     &__header{
     
@@ -169,6 +224,9 @@
             margin-bottom: 2.25rem;
             @include dt-section-header;
         }
+        @include desktop{
+
+        }
     }
 
     &__img{
@@ -179,11 +237,17 @@
         @include tablet {
             margin: 0 4rem;
         }
+        @include desktop{
+
+        }
     }
     &__body-text{
         @include tablet{
             column-count: 2;
             column-gap: 2.25rem;
+        }
+        @include desktop{
+
         }
     }
 
@@ -195,13 +259,19 @@
             @include dt-body;
             margin-top: 0
         }
+        @include desktop{
+
         }
+    }
 
     &__quote{
         @include m-subheader;
         @include tablet{
             @include dt-subheader;
             margin-top: 1rem;
+        }
+        @include desktop{
+            width: 70%;
         }
     }
 
@@ -211,6 +281,9 @@
             @include dt-body;
             font-family: demi;
         }
+        @include desktop{
+
+        }
     }
 
     &__subheading{
@@ -218,7 +291,9 @@
         @include tablet{
             @include dt-subheader;
         }
+        @include desktop{
 
+        }
     }
 
 
@@ -231,10 +306,20 @@
         margin: 2.25rem 0;
     }
 
+    &__wrapper{
+        @include desktop{
+            width: 80rem;
+            margin-inline: auto;
+        }
+    }
+
     &__header{
         padding: 1.5rem 1rem 1rem 1rem;
         @include tablet{
             padding: 3rem 2.25rem 2.25rem 2.25rem;
+        }
+        @include desktop{
+
         }
     }
 
@@ -242,6 +327,9 @@
         @include m-section-header;
         @include tablet{
             @include dt-section-header;
+        }
+        @include desktop{
+
         }
     }
 
@@ -254,9 +342,9 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 1.125rem;
-            // margin: 0 2.25rem 0 2.25rem;
-            
+            gap: 1.125rem;            
+        }
+        @include desktop{
 
         }
     }
@@ -269,6 +357,9 @@
             width: 30%;
             margin: 0;
         }
+        @include desktop{
+
+        }
     }
 }
 
@@ -276,11 +367,20 @@
     background-color: $bandsite-black;
     padding: 1.5rem 1rem;
 
+    &__wrapper{
+        @include desktop{
+            width: 80rem;
+            margin-inline: auto;
+        }
+    }
+
     &__header{
         @include tablet {
             margin: 2.25rem;
             display: flex;
-            
+        }
+        @include desktop{
+
         }
     }
 
@@ -290,6 +390,9 @@
         @include tablet{
             @include dt-section-header;
             margin-right: 1rem;
+        }
+        @include desktop{
+
         }
     }
 
@@ -309,12 +412,13 @@
             max-width: 28%;
             justify-content: normal;
         }
+        @include desktop{
+
+        }
     }
 
     &__social-icon{
-        @include tablet{
 
-        }
     }
 
     &__logo-section{
@@ -327,6 +431,9 @@
             display: block;
             margin-left: auto;
         }
+        @include desktop{
+
+        }
 
     }
 
@@ -336,12 +443,18 @@
             display: flex;
             justify-content: space-between;
         }
+        @include desktop{
+
+        }
     }
 
     &__contact-info{
         margin: 1rem 0;
         @include tablet{
             margin: 0;
+        }
+        @include desktop{
+
         }
     }
 
@@ -352,6 +465,9 @@
         @include tablet{
             @include dt-footer;
             margin: 0;
+        }
+        @include desktop{
+
         }
     }
 
@@ -368,7 +484,10 @@
     @include tablet{
         margin-left: 2.25rem;
     }
-    
+    @include desktop{
+
+    }
+
     &__logo-section{
         margin-top: 3rem;
     }
@@ -377,6 +496,9 @@
         color: $white;
         @include tablet{
             display: none;
+        }
+        @include desktop{
+
         }
     }
 
@@ -389,6 +511,9 @@
         @include m-footer;
         @include tablet{
             @include dt-footer;
+        }
+        @include desktop{
+
         }
     }
 }
