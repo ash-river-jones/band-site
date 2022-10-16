@@ -373,12 +373,13 @@
         margin: .5rem 0 ;
         @include tablet{
             @include dt-footer;
-            margin: 0;
+            margin: .5rem 0;
         }
     }
 
     &__contact-details--name{
         font-family: demi;
+        margin: 0;
     }
 
     &__contact-details--link{

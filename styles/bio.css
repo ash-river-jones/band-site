@@ -440,11 +440,12 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-family: regular;
-    margin: 0;
+    margin: 0.5rem 0;
   }
 }
 .footer__contact-details--name {
   font-family: demi;
+  margin: 0;
 }
 .footer__contact-details--link {
   text-decoration: none;
