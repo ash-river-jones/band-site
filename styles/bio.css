@@ -97,13 +97,16 @@
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: regular;
+  font-family: regular;
+}
+.header__nav-link:hover {
+  color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .header__nav-link {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: regular;
-    font-family: reg-bold;
   }
 }
 .header__nav-item--active {
@@ -111,8 +114,13 @@
   border-bottom: 3px solid #FFFFFF;
   font-family: reg-bold;
 }
-.header__nav-link--inactive {
+.header__nav-item--inactive {
   font-family: regular;
+}
+.header__nav-item--inactive:hover {
+  color: #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+  font-family: reg-bold;
 }
 
 .blank-space {
@@ -123,6 +131,7 @@
     height: 4.4375rem;
   }
 }
+
 .hero-banner {
   background-image: url(../assets/Images/hero-bio.jpg);
   background-position: center;
@@ -154,7 +163,7 @@
   }
 }
 .hero-banner__title {
-  color: white;
+  color: #FFFFFF;
   margin: 0;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -167,6 +176,7 @@
     font-family: reg-bold;
   }
 }
+
 .about {
   background-color: #FFFFFF;
   margin: 1rem;
@@ -273,6 +283,7 @@
     font-family: demi;
   }
 }
+
 .gallery {
   background-color: #FAFAFA;
   margin: 1rem 0;
@@ -322,10 +333,21 @@
     gap: 1.125rem;
   }
 }
+@media (min-width: 1280px) {
+  .gallery__img-section {
+    margin: 0;
+  }
+}
 .gallery__img {
   margin: 0.5rem 0;
   width: 100%;
   height: auto;
+  transition: filter 0.375s, transform 0.5s, border-radius 0.5s;
+}
+.gallery__img:hover {
+  filter: brightness(80%);
+  transform: scale(1.03);
+  border-radius: 0.5rem;
 }
 @media (min-width: 768px) {
   .gallery__img {
@@ -333,6 +355,7 @@
     margin: 0;
   }
 }
+
 .footer {
   background-color: #323232;
   padding: 1.5rem 1rem;
