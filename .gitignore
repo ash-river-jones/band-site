@@ -16,3 +16,6 @@ node_modules/
 
 # Ignore generated css map
 *.css.map
+
+# Ignore generated folders
+.vscode

@@ -1,0 +1,263 @@
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+@use './partials/typography' as *;
+
+.header{
+    background-color: $bandsite-black;
+    width: 100%;
+    position: fixed;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablet{
+            flex-direction: row;
+        }
+        @include desktop{
+            flex-direction: row;
+            width: 80rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        margin-top: 1rem;
+        @include tablet{
+        margin: 1rem 2rem;
+        }
+    }
+
+    &__logo-img{
+        margin: 0;
+    }
+
+    &__nav{
+        width: 100%;
+        @include tablet{
+            width: auto;
+            margin: 0 1.5rem;
+            height: 71px;
+        }
+    }
+
+    &__nav-list{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        justify-content: space-around;
+        margin: 0;
+
+        @include tablet{
+            height: 4.4375rem;
+        }
+    }
+
+    &__nav-item{
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5rem;
+        padding-bottom: 1rem;
+
+        @include tablet{
+            margin: 1.5rem 1rem 0rem 1rem;
+        }
+    }
+
+    &__nav-link{
+        text-decoration: none;
+        color: $mercury;
+        @include m-body;
+        font-family: regular;
+
+        &:hover{
+            color: $white;
+        }
+
+        @include tablet{
+            @include dt-body;
+        }
+    }
+
+    &__nav-item--active{
+        color: $white;
+        border-bottom: 3px solid $white;
+        font-family: reg-bold;
+    }
+
+    &__nav-item--inactive{
+        font-family: regular;
+            
+        &:hover{
+            color: $white;
+            border-bottom: 3px solid $white;
+            font-family: reg-bold;        }
+    }
+}
+
+.blank-space{
+    height: 6rem;
+
+    @include tablet{
+        height: 4.4375rem;
+    }
+}
+
+.hero-banner{
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__wrapper{
+        display: flex;
+        min-height: 45vh;
+        width: auto;
+        height: 30vw;
+    }
+
+    &__background{
+        background-color: rgba($color: #323232, $alpha: 0.5);
+        width: 100vw;
+        display: inline-flex;        
+        align-items: center;
+    }
+
+    &__title-section{
+        margin: 1rem;
+        @include tablet{
+            margin: 2.25rem;
+        }
+        @include desktop{
+            width: 80rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__title{
+        color: $white;
+        margin: 0;
+        @include m-page-header;
+
+        @include tablet{
+            @include dt-page-header;
+        }
+    }
+}
+
+.footer{
+    background-color: $bandsite-black;
+    padding: 1.5rem 1rem;
+
+    &__wrapper{
+        @include desktop{
+            width: 80rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__header{
+        @include tablet {
+            margin: 2.25rem;
+            display: flex;
+        }
+    }
+
+    &__heading{
+        color: $white;
+        @include m-section-header;
+        @include tablet{
+            @include dt-section-header;
+            margin-right: 1rem;
+        }
+    }
+
+    &__social-icon-list{
+        margin: 1rem 0;
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        @include tablet {
+            display: flex;
+            gap: 1.125rem;
+            width: auto;
+            max-width: 28%;
+            justify-content: normal;
+        }
+    }
+
+    &__logo-section{
+        margin-left: auto;
+    }
+
+    &__logo{
+        display:none;
+        @include tablet{
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    &__contact{
+        @include tablet{
+            margin: 0 2.25rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__contact-info{
+        margin: 1rem 0;
+        @include tablet{
+            margin: 0;
+        }
+    }
+
+    &__contact-details{
+        color: $white;
+        @include m-footer;
+        margin: .5rem 0 ;
+        @include tablet{
+            @include dt-footer;
+            margin: .5rem 0;
+        }
+    }
+
+    &__contact-details--name{
+        font-family: demi;
+        margin: 0;
+    }
+
+    &__contact-details--link{
+        text-decoration: none;
+    }
+}
+
+.copy{
+    @include tablet{
+        margin-left: 2.25rem;
+    }
+
+    &__logo-section{
+        margin-top: 3rem;
+    }
+
+    &__logo{
+        color: $white;
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__message{
+        color: $white;
+        @include m-footer;
+        @include tablet{
+            @include dt-footer;
+        }
+    }
+}
