@@ -141,6 +141,7 @@
   display: flex;
   min-height: 45vh;
   width: auto;
+  height: 30vw;
 }
 .hero-banner__background {
   background-color: rgba(50, 50, 50, 0.5);
