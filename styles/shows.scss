@@ -2,3 +2,86 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 @use './partials/global' as *;
+
+.shows-page-body{
+
+}
+
+.shows{
+
+    &__wrapper{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__heading{
+        
+    }
+
+    &__header{
+        @include m-section-header;
+        font-family: demi;
+        color: $bandsite-black;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.show{
+    border-bottom: 1px solid $mercury;
+    
+    &__info{
+
+    }
+
+    &__info-heading{
+        @include m-label-button;
+        color: $silver;
+    }
+
+    &__dates{
+
+    }
+
+    &__date{
+        @include m-body;
+        color: $bandsite-black;
+        font-family: demi;
+    }
+
+    &__venues{
+
+    }
+
+    &__venue{
+        @include m-body;
+        color: $bandsite-black;
+    }
+
+    &__locations{
+
+    }
+
+    &__location{
+        @include m-body;
+        color: $bandsite-black;
+    }
+
+    &__btn-section{
+        background-color: $bandsite-black;
+        border-radius: .25rem;
+        margin: 1rem 0 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn{
+        @include m-subheader;
+        width: inherit;
+        text-align: center;
+        margin: .5rem;
+        color: $white;
+
+    }
+}

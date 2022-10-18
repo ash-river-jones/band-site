@@ -1,6 +1,13 @@
-@use './partials/mixins' as *;
-@use './partials/variables' as *;
-@use './partials/typography' as *;
+@use './mixins' as *;
+@use './variables' as *;
+@use './typography' as *;
+
+* {
+    font-family: regular;
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;   
+}
 
 .header{
     background-color: $bandsite-black;
@@ -42,7 +49,7 @@
         @include tablet{
             width: auto;
             margin: 0 1.5rem;
-            height: 71px;
+            height: 1rem;
         }
     }
 
@@ -61,8 +68,8 @@
     &__nav-item{
         width: 100%;
         text-align: center;
-        margin-top: 1.5rem;
-        padding-bottom: 1rem;
+        margin-top: .75rem;
+        padding-bottom: .5rem;
 
         @include tablet{
             margin: 1.5rem 1rem 0rem 1rem;
@@ -101,7 +108,7 @@
 }
 
 .blank-space{
-    height: 6rem;
+    height: 5.125rem;
 
     @include tablet{
         height: 4.4375rem;
@@ -109,9 +116,13 @@
 }
 
 .hero-banner{
-    background-image: url(../assets/Images/hero-bio.jpg);
+    background-image: url(../../assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
+
+    &--shows{
+        background-image: url(../../assets/Images/hero-shows.jpg);
+    }
 
     &__wrapper{
         display: flex;
@@ -138,6 +149,12 @@
         }
     }
 
+    &__subheader{
+        @include m-subheader;
+        color: $white;
+        font-family: regular;
+    }
+
     &__title{
         color: $white;
         margin: 0;
@@ -147,7 +164,18 @@
             @include dt-page-header;
         }
     }
+
+    &__soundcloud{
+        max-height: 15vh;
+    }
 }
+
+
+
+
+
+
+
 
 .footer{
     background-color: $bandsite-black;

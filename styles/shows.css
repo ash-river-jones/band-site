@@ -316,181 +316,62 @@
   }
 }
 
-.about {
-  background-color: #FFFFFF;
-  margin: 1rem;
+.shows__wrapper {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-@media (min-width: 768px) {
-  .about {
-    margin: 2.25rem;
-  }
-}
-@media (min-width: 1280px) {
-  .about {
-    width: 80rem;
-    margin-inline: auto;
-  }
-}
-.about__heading {
-  color: #323232;
+.shows__header {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: reg-bold;
+  font-family: demi;
+  color: #323232;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 768px) {
-  .about__heading {
-    margin-top: 3rem;
-    margin-bottom: 2.25rem;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-family: reg-bold;
-  }
-}
-.about__img {
-  max-width: 100%;
-}
-@media (min-width: 768px) {
-  .about__body-section {
-    margin: 0 4rem;
-  }
-}
-@media (min-width: 768px) {
-  .about__body-text {
-    -moz-column-count: 2;
-         column-count: 2;
-    -moz-column-gap: 2.25rem;
-         column-gap: 2.25rem;
-  }
-}
-.about__body {
-  color: #323232;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-family: regular;
-  margin: 1rem 0;
-}
-@media (min-width: 768px) {
-  .about__body {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-family: regular;
-    margin-top: 0;
-  }
-}
-.about__quote {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: demi;
-}
-@media (min-width: 768px) {
-  .about__quote {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: demi;
-    margin-top: 1rem;
-  }
-}
-@media (min-width: 1280px) {
-  .about__quote {
-    width: 70%;
-  }
-}
-.about__quote-author {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-family: regular;
-}
-@media (min-width: 768px) {
-  .about__quote-author {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-family: regular;
-    font-family: demi;
-  }
-}
-.about__subheading {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: demi;
-}
-@media (min-width: 768px) {
-  .about__subheading {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: demi;
-  }
-}
 
-.gallery {
-  background-color: #FAFAFA;
-  margin: 1rem 0;
+.show {
+  border-bottom: 1px solid #E1E1E1;
 }
-@media (min-width: 768px) {
-  .gallery {
-    margin: 2.25rem 0;
-  }
-}
-@media (min-width: 1280px) {
-  .gallery__wrapper {
-    width: 80rem;
-    margin-inline: auto;
-  }
-}
-.gallery__header {
-  padding: 1.5rem 1rem 1rem 1rem;
-}
-@media (min-width: 768px) {
-  .gallery__header {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
-  }
-}
-.gallery__heading {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.show__info-heading {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
   font-family: reg-bold;
+  color: #AFAFAF;
 }
-@media (min-width: 768px) {
-  .gallery__heading {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-family: reg-bold;
-  }
+.show__date {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: regular;
+  color: #323232;
+  font-family: demi;
 }
-.gallery__img-section {
-  display: inline-flex;
-  flex-direction: column;
-  margin: 0 1rem;
+.show__venue {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: regular;
+  color: #323232;
 }
-@media (min-width: 768px) {
-  .gallery__img-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.125rem;
-  }
+.show__location {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: regular;
+  color: #323232;
 }
-@media (min-width: 1280px) {
-  .gallery__img-section {
-    margin: 0;
-  }
+.show__btn-section {
+  background-color: #323232;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.gallery__img {
-  margin: 0.5rem 0;
-  width: 100%;
-  height: auto;
-  transition: filter 0.375s, transform 0.5s, border-radius 0.5s;
-}
-.gallery__img:hover {
-  filter: brightness(80%);
-  transform: scale(1.03);
-  border-radius: 0.5rem;
-}
-@media (min-width: 768px) {
-  .gallery__img {
-    width: 30%;
-    margin: 0;
-  }
-}/*# sourceMappingURL=bio.css.map */
+.show__btn {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: demi;
+  width: inherit;
+  text-align: center;
+  margin: 0.5rem;
+  color: #FFFFFF;
+}/*# sourceMappingURL=shows.css.map */

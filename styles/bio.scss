@@ -3,16 +3,6 @@
 @use './partials/typography' as *;
 @use './partials/global' as *;
 
-
-* {
-    font-family: regular;
-    box-sizing:border-box;
-    padding: 0;
-    margin: 0;
-    
-    
-}
-
 .about{
     background-color:$white ;
     margin: 1rem;
