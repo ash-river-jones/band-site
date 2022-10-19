@@ -143,3 +143,155 @@
         }
     }
 }
+
+.comment{
+    margin: 1.5rem 1rem 1rem 1rem;
+    
+    &__heading{
+
+    }
+
+    &__header{
+        @include m-section-header;
+        font-family: demi;
+    }
+}
+
+.new-comment{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $mercury;
+
+
+    &__icon-section{
+
+    }
+
+    &__icon{
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 2rem;
+        margin: 1.5625rem 1rem 0 0;
+    }
+
+    &__form-wrapper{
+    }
+    
+    &__form-section{
+
+    }
+
+    &__subheader{
+        @include m-label-button;
+        color: $silver;
+        font-family: demi;
+        margin-top: 1rem;
+        margin-bottom: .25rem;
+    }
+
+    &__subheader--name{
+        margin-top: 0;
+    }
+
+    &__name-form{
+        display: flex;
+        align-items: center;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: .25rem;
+        height: 2.25rem;
+    }
+
+    &__name{
+        margin: .75rem;
+        color: $bandsite-black;
+
+    }
+
+    &__comment-form{
+        display: flex;
+        align-items: center;
+        background-color: $alabaster;
+        border: .0625rem solid $mercury;
+        border-radius: .25rem;
+        height: 2.25rem;
+    }
+
+    &__comment{
+        margin: .75rem;
+        color: $bandsite-black;
+    }
+
+    &__btn-section{
+        background-color: $bandsite-black;
+        border-radius: .25rem;
+        margin: 1rem 0 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14rem;
+
+    }
+
+    &__btn{
+        @include m-subheader;
+        width: inherit;
+        text-align: center;
+        margin: .5rem;
+        color: $white;
+
+    }
+}
+
+.comments-section{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $mercury;
+
+    &__comment{
+        display: flex;
+    }
+
+    &__icon-section{
+
+    }
+
+    &__icon{
+        background-color: $mercury;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__comment-section{
+
+    }
+
+    &__comment-heading{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__top-left{
+        @include m-body;
+        font-family: demi;
+        color: $bandsite-black
+    }
+
+    &__top-right{
+        @include m-body;
+        color: $silver
+    }
+
+    &__comment-body{
+        @include m-body;
+        color: $bandsite-black;
+        margin: 0.5rem 0 .5rem 0;
+    }
+}

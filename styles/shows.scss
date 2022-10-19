@@ -8,35 +8,42 @@
 }
 
 .shows{
+    margin: 0 0;
+
 
     &__wrapper{
-        margin-left: 1rem;
-        margin-right: 1rem;
+        // margin-left: 1rem;
+        // margin-right: 1rem;
+
     }
 
     &__heading{
-        
+        @include m-subheader;
+        font-family: reg-bold;
+        color: $bandsite-black;
+        margin: 1.5rem 1rem 1rem 1rem;
     }
 
     &__header{
-        @include m-section-header;
-        font-family: demi;
-        color: $bandsite-black;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
+
     }
 }
 
 .show{
     border-bottom: 1px solid $mercury;
-    
-    &__info{
 
+    &__wrapper{
+        margin: 1rem;
+    }
+
+    &__info{
+        margin-top: 1rem;
     }
 
     &__info-heading{
         @include m-label-button;
         color: $silver;
+        font-family: demi;
     }
 
     &__dates{
@@ -80,7 +87,7 @@
         @include m-subheader;
         width: inherit;
         text-align: center;
-        margin: .5rem;
+        margin: .5rem auto;
         color: $white;
 
     }

@@ -316,28 +316,32 @@
   }
 }
 
-.shows__wrapper {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.shows {
+  margin: 0 0;
 }
-.shows__header {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: reg-bold;
+.shows__heading {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-family: demi;
+  font-family: reg-bold;
   color: #323232;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem 1rem 1rem 1rem;
 }
-
 .show {
   border-bottom: 1px solid #E1E1E1;
+}
+.show__wrapper {
+  margin: 1rem;
+}
+.show__info {
+  margin-top: 1rem;
 }
 .show__info-heading {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: reg-bold;
   color: #AFAFAF;
+  font-family: demi;
 }
 .show__date {
   font-size: 0.8125rem;
@@ -372,6 +376,6 @@
   font-family: demi;
   width: inherit;
   text-align: center;
-  margin: 0.5rem;
+  margin: 0.5rem auto;
   color: #FFFFFF;
 }/*# sourceMappingURL=shows.css.map */

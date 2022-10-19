@@ -493,4 +493,126 @@
     width: 30%;
     margin: 0;
   }
+}
+
+.comment {
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+.comment__header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: reg-bold;
+  font-family: demi;
+}
+
+.new-comment {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #E1E1E1;
+}
+.new-comment__icon {
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 2rem;
+  margin: 1.5625rem 1rem 0 0;
+}
+.new-comment__subheader {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-family: reg-bold;
+  color: #AFAFAF;
+  font-family: demi;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+.new-comment__subheader--name {
+  margin-top: 0;
+}
+.new-comment__name-form {
+  display: flex;
+  align-items: center;
+  background-color: #FAFAFA;
+  border: 1px solid #E1E1E1;
+  border-radius: 0.25rem;
+  height: 2.25rem;
+}
+.new-comment__name {
+  margin: 0.75rem;
+  color: #323232;
+}
+.new-comment__comment-form {
+  display: flex;
+  align-items: center;
+  background-color: #FAFAFA;
+  border: 0.0625rem solid #E1E1E1;
+  border-radius: 0.25rem;
+  height: 2.25rem;
+}
+.new-comment__comment {
+  margin: 0.75rem;
+  color: #323232;
+}
+.new-comment__btn-section {
+  background-color: #323232;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+}
+.new-comment__btn {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: demi;
+  width: inherit;
+  text-align: center;
+  margin: 0.5rem;
+  color: #FFFFFF;
+}
+
+.comments-section {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #E1E1E1;
+}
+.comments-section__comment {
+  display: flex;
+}
+.comments-section__icon {
+  background-color: #E1E1E1;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+.comments-section__comment-heading {
+  display: flex;
+  justify-content: space-between;
+}
+.comments-section__top-left {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: regular;
+  font-family: demi;
+  color: #323232;
+}
+.comments-section__top-right {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: regular;
+  color: #AFAFAF;
+}
+.comments-section__comment-body {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: regular;
+  color: #323232;
+  margin: 0.5rem 0 0.5rem 0;
 }/*# sourceMappingURL=bio.css.map */
