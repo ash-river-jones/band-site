@@ -586,6 +586,8 @@
 }
 .comments-section__comment {
   display: flex;
+  margin-top: 1rem;
+  border-bottom: 1px solid #E1E1E1;
 }
 .comments-section__icon {
   background-color: #E1E1E1;

@@ -255,6 +255,8 @@
 
     &__comment{
         display: flex;
+        margin-top: 1rem;
+        border-bottom: 1px solid $mercury;
     }
 
     &__icon-section{

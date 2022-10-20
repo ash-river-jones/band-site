@@ -121,5 +121,4 @@ showContainer.appendChild(showWrapper)
 }
 
 const showsWrapper = document.querySelector(".show__container")
-
 addShow(shows, showsWrapper)
