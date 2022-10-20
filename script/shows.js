@@ -33,10 +33,12 @@ const shows = [
 
 
 const addShow = function(showList, showContainer){
-
+    
     showContainer.innerText = ""
 
 for (let i = 0; i < showList.length; i++){
+
+// Show container element creation
 
 const show = document.createElement("div")
 show.classList.add("show")
@@ -46,7 +48,7 @@ showWrapper.classList.add("show__wrapper")
 
 show.appendChild(showWrapper)
 
-// Date
+// Date creation
 
 const showInfoDate = document.createElement("div")
 showInfoDate.classList.add("show__info")
@@ -62,7 +64,7 @@ showDate.innerText = showList[i].date
 showInfoDate.appendChild(showInfoHeadingDate)
 showInfoDate.appendChild(showDate)
 
-// Venue
+// Venue creation
 
 const showInfoVenue = document.createElement("div")
 showInfoVenue.classList.add("show__info")
@@ -78,7 +80,7 @@ showVenue.innerText = showList[i].venue
 showInfoVenue.appendChild(showInfoHeadingVenue)
 showInfoVenue.appendChild(showVenue)
 
-// Location
+// Location creation
 
 const showInfoLocation = document.createElement("div")
 showInfoLocation.classList.add("show__info")
@@ -94,7 +96,7 @@ showLocation.innerText = showList[i].location
 showInfoLocation.appendChild(showInfoHeadingLocation)
 showInfoLocation.appendChild(showLocation)
 
-// Button
+// Button creation 
 
 const showBtnSection = document.createElement("div")
 showBtnSection.classList.add("show__btn-section")
@@ -105,18 +107,19 @@ showBtn.innerText = ("BUY TICKETS")
 
 showBtnSection.appendChild(showBtn)
 
-// Appending 
+// Appending show details to individual show 
 
 showWrapper.appendChild(showInfoDate)
 showWrapper.appendChild(showInfoVenue)
 showWrapper.appendChild(showInfoLocation)
 showWrapper.appendChild(showBtnSection)
 
+// Injecting show into html 
+
 showContainer.appendChild(showWrapper)
 }
 }
 
 const showsWrapper = document.querySelector(".show__container")
-console.log(showsWrapper)
 
 addShow(shows, showsWrapper)
