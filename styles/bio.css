@@ -65,7 +65,7 @@
   .header__nav {
     width: auto;
     margin: 0 1.5rem;
-    height: 1rem;
+    height: 71px;
   }
 }
 .header__nav-list {
@@ -83,12 +83,12 @@
 .header__nav-item {
   width: 100%;
   text-align: center;
-  margin-top: 0.75rem;
-  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .header__nav-item {
-    margin: 1.5rem 1rem 0rem 1rem;
+    margin: 0 1rem 0rem 1rem;
   }
 }
 .header__nav-link {
@@ -124,7 +124,7 @@
 }
 
 .blank-space {
-  height: 5.125rem;
+  height: 6rem;
 }
 @media (min-width: 768px) {
   .blank-space {
@@ -172,6 +172,7 @@
   font-family: demi;
   color: #FFFFFF;
   font-family: regular;
+  margin-bottom: 1rem;
 }
 .hero-banner__title {
   color: #FFFFFF;
@@ -189,6 +190,7 @@
 }
 .hero-banner__soundcloud {
   max-height: 15vh;
+  margin-top: 1rem;
 }
 
 .footer {
