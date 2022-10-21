@@ -175,7 +175,7 @@
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 2rem;
-        margin: 1.5625rem 1rem 0 0;
+        margin: 1.375rem 1rem 0 0;
     }
 
     &__form-wrapper{
@@ -198,33 +198,34 @@
     }
 
     &__name-form{
-        display: flex;
-        align-items: center;
+        width: 14.75rem;
         background-color: $alabaster;
         border: 1px solid $mercury;
         border-radius: .25rem;
         height: 2.25rem;
-    }
+        margin-bottom: 1rem;
+        padding: .75rem;
 
-    &__name{
-        margin: .75rem;
-        color: $bandsite-black;
-
+        &::placeholder{
+            color: $bandsite-black;    
+        }
     }
 
     &__comment-form{
-        display: flex;
-        align-items: center;
+        width: 14.75rem;
+        min-height: 6rem;
         background-color: $alabaster;
         border: .0625rem solid $mercury;
         border-radius: .25rem;
         height: 2.25rem;
+        padding: 12px;
+        resize: none;
+
+        &::placeholder{
+            color: $bandsite-black;
+        }
     }
 
-    &__comment{
-        margin: .75rem;
-        color: $bandsite-black;
-    }
 
     &__btn-section{
         background-color: $bandsite-black;
@@ -233,18 +234,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 14rem;
-
-    }
-
-    &__btn{
-        @include m-subheader;
-        width: inherit;
-        text-align: center;
-        margin: .5rem;
+        width: 14.75rem;
+        height: 2.5rem;
         color: $white;
-
+        @include m-subheader;
+        border: 0;
+        &::placeholder{
+            text-align: center;
+            margin: .5rem;
+            
+        }
     }
+
 }
 
 .comments-section{
@@ -272,7 +273,7 @@
     }
 
     &__comment-section{
-
+        width: 14.75rem;
     }
 
     &__comment-heading{
@@ -292,8 +293,10 @@
     }
 
     &__comment-body{
+        max-width: 14.75rem;
         @include m-body;
         color: $bandsite-black;
         margin: 0.5rem 0 .5rem 0;
+        overflow-wrap: break-word;
     }
 }

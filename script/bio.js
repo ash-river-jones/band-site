@@ -79,3 +79,21 @@ commentContainer.appendChild(comment)
 const commentContainer = document.querySelector(".comments-section__container")
 addComments(comments, commentContainer)
 
+
+
+const commentForm = document.getElementById("comment-form")
+const date = new Date()
+
+commentForm.addEventListener("submit",function(event){
+    event.preventDefault()
+
+    const newComment = {
+        name: event.target.name.value,
+        date: date.toLocaleDateString(),
+        comment: event.target.comment.value
+    }
+
+    comments.unshift(newComment)
+    addComments(comments, commentContainer)
+})
+

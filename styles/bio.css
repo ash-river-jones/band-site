@@ -521,7 +521,7 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 2rem;
-  margin: 1.5625rem 1rem 0 0;
+  margin: 1.375rem 1rem 0 0;
 }
 .new-comment__subheader {
   font-size: 0.625rem;
@@ -536,27 +536,40 @@
   margin-top: 0;
 }
 .new-comment__name-form {
-  display: flex;
-  align-items: center;
+  width: 14.75rem;
   background-color: #FAFAFA;
   border: 1px solid #E1E1E1;
   border-radius: 0.25rem;
   height: 2.25rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
 }
-.new-comment__name {
-  margin: 0.75rem;
+.new-comment__name-form::-moz-placeholder {
+  color: #323232;
+}
+.new-comment__name-form:-ms-input-placeholder {
+  color: #323232;
+}
+.new-comment__name-form::placeholder {
   color: #323232;
 }
 .new-comment__comment-form {
-  display: flex;
-  align-items: center;
+  width: 14.75rem;
+  min-height: 6rem;
   background-color: #FAFAFA;
   border: 0.0625rem solid #E1E1E1;
   border-radius: 0.25rem;
   height: 2.25rem;
+  padding: 12px;
+  resize: none;
 }
-.new-comment__comment {
-  margin: 0.75rem;
+.new-comment__comment-form::-moz-placeholder {
+  color: #323232;
+}
+.new-comment__comment-form:-ms-input-placeholder {
+  color: #323232;
+}
+.new-comment__comment-form::placeholder {
   color: #323232;
 }
 .new-comment__btn-section {
@@ -566,16 +579,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 14rem;
-}
-.new-comment__btn {
+  width: 14.75rem;
+  height: 2.5rem;
+  color: #FFFFFF;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: demi;
-  width: inherit;
+  border: 0;
+}
+.new-comment__btn-section::-moz-placeholder {
   text-align: center;
   margin: 0.5rem;
-  color: #FFFFFF;
+}
+.new-comment__btn-section:-ms-input-placeholder {
+  text-align: center;
+  margin: 0.5rem;
+}
+.new-comment__btn-section::placeholder {
+  text-align: center;
+  margin: 0.5rem;
 }
 
 .comments-section {
@@ -596,6 +618,9 @@
   border-radius: 2rem;
   margin-right: 1rem;
 }
+.comments-section__comment-section {
+  width: 14.75rem;
+}
 .comments-section__comment-heading {
   display: flex;
   justify-content: space-between;
@@ -614,9 +639,11 @@
   color: #AFAFAF;
 }
 .comments-section__comment-body {
+  max-width: 14.75rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: regular;
   color: #323232;
   margin: 0.5rem 0 0.5rem 0;
+  overflow-wrap: break-word;
 }/*# sourceMappingURL=bio.css.map */
