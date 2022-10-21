@@ -80,20 +80,35 @@ const commentContainer = document.querySelector(".comments-section__container")
 addComments(comments, commentContainer)
 
 
-
+const nameForm = document.getElementById("newCommentName")
 const commentForm = document.getElementById("comment-form")
 const date = new Date()
+
+
 
 commentForm.addEventListener("submit",function(event){
     event.preventDefault()
 
+if(event.target.name.value ===""){
+    const nameForm = document.getElementById("newCommentName")
+    nameForm.classList.add("new-comment__error")
+    return;
+} else if(event.target.comment.value ===""){
+    const commentForm = document.getElementById("newCommentBody")
+    commentForm.classList.add("new-comment__error")
+    return;
+} else {
+    
     const newComment = {
         name: event.target.name.value,
         date: date.toLocaleDateString(),
         comment: event.target.comment.value
     }
 
+
     comments.unshift(newComment)
     addComments(comments, commentContainer)
-})
+    nameForm.value = ""
+    commentForm.value = ""
+}})
 
