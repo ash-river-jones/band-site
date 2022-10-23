@@ -69,7 +69,7 @@
         @include m-body;
         @include tablet {
             @include dt-body;
-            font-family: demi;
+            font-weight: 600;
         }
     }
 
@@ -86,6 +86,9 @@
     margin: 1rem 0;
     @include tablet{
         margin: 2.25rem 0;
+    }
+    @include desktop {
+        padding-bottom: 3rem;
     }
 
     &__wrapper{
@@ -118,7 +121,8 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 1.125rem;            
+            gap: 1.125rem;       
+            margin: 0 1rem 2.25rem 1rem;     
         }
         @include desktop{
             margin: 0;
@@ -146,6 +150,15 @@
 
 .comment{
     margin: 1.5rem 1rem 1rem 1rem;
+
+    @include tablet {
+        margin: 2.25rem;
+    }
+
+    @include desktop {
+        width: 73.75rem; 
+        margin: 2.25rem auto;
+    }
     
     &__heading{
 
@@ -153,7 +166,11 @@
 
     &__header{
         @include m-section-header;
-        font-family: demi;
+        font-weight: 600;
+        @include tablet {
+            @include dt-section-header;
+            font-weight: 600;
+        }
     }
 }
 
@@ -162,6 +179,11 @@
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid $mercury;
+    @include tablet {
+        justify-content: center;
+        margin: 2.25rem 4.5rem 0rem 4.5rem;
+        width: 33.25rem;
+    }
 
 
     &__icon-section{
@@ -176,21 +198,28 @@
         height: 2.25rem;
         border-radius: 2rem;
         margin: 1.375rem 1rem 0 0;
+        @include tablet {
+            
+        }
     }
 
     &__form-wrapper{
+        @include tablet {
+            width: 30rem
+        }
     }
     
-    &__form-section{
-
-    }
-
     &__subheader{
         @include m-label-button;
         color: $silver;
-        font-family: demi;
+        font-weight: 600;
         margin-top: 1rem;
         margin-bottom: .25rem;
+        @include tablet{
+            @include dt-label-button;
+            font-weight: 600;
+
+        }
     }
 
     &__subheader--name{
@@ -214,6 +243,12 @@
             outline: none !important;
             border: 1px solid $bandsite-darkblack;
         }
+
+        @include tablet {
+            width: 30rem;
+            height: 3rem;
+            padding: 1rem;
+        }
     }
     &__error{
         border: 1px solid #D22D2D;
@@ -226,7 +261,7 @@
         border: .0625rem solid $mercury;
         border-radius: .25rem;
         height: 2.25rem;
-        padding: 12px;
+        padding: .75rem;
         resize: none;
 
         &::placeholder{
@@ -235,6 +270,11 @@
         &:focus{
             outline: none !important;
             border: 1px solid $bandsite-darkblack;
+        }
+        @include tablet {
+            width: 30rem;
+            height: 3rem;
+            padding: 1rem;
         }
     }
     &__error{
@@ -259,6 +299,11 @@
             margin: .5rem;
             
         }
+        @include tablet {
+            margin-left: auto;
+            margin-bottom: 1.5rem;
+            width: 10rem;
+        }
     }
 
 }
@@ -268,11 +313,22 @@
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid $mercury;
+    @include tablet{
+        margin: 0rem 4.5rem 1rem 4.5rem;
+
+    }
+
+    &__container{
+        width: 33.25rem;
+    }
 
     &__comment{
         display: flex;
         margin-top: 1rem;
         border-bottom: 1px solid $mercury;
+        @include tablet {
+            
+        }
     }
 
     &__icon-section{
@@ -289,6 +345,10 @@
 
     &__comment-section{
         width: 14.75rem;
+        @include tablet {
+            width: 30rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__comment-heading{
@@ -298,13 +358,20 @@
     
     &__top-left{
         @include m-body;
-        font-family: demi;
-        color: $bandsite-black
+        font-weight: 600;
+        color: $bandsite-black;
+        @include tablet{
+            @include dt-body;
+            font-weight: 600;
+        }
     }
 
     &__top-right{
         @include m-body;
-        color: $silver
+        color: $silver;
+        @include tablet{
+            @include dt-body;
+        }
     }
 
     &__comment-body{
@@ -313,5 +380,9 @@
         color: $bandsite-black;
         margin: 0.5rem 0 .5rem 0;
         overflow-wrap: break-word;
+        @include tablet{
+            @include dt-body;
+            max-width: 30rem;
+        }
     }
 }

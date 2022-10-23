@@ -89,11 +89,17 @@ const date = new Date()
 commentForm.addEventListener("submit",function(event){
     event.preventDefault()
 
-if(event.target.name.value ===""){
+if(event.target.name.value ==="" && event.target.comment.value ===""){
+    const nameForm = document.getElementById("newCommentName")
+    const commentForm = document.getElementById("newCommentBody")
+    nameForm.classList.add("new-comment__error")
+    commentForm.classList.add("new-comment__error")
+    return;
+} else if(event.target.name.value ===""){
     const nameForm = document.getElementById("newCommentName")
     nameForm.classList.add("new-comment__error")
     return;
-} else if(event.target.comment.value ===""){
+}else if(event.target.comment.value ===""){
     const commentForm = document.getElementById("newCommentBody")
     commentForm.classList.add("new-comment__error")
     return;
@@ -105,10 +111,12 @@ if(event.target.name.value ===""){
         comment: event.target.comment.value
     }
 
-
     comments.unshift(newComment)
     addComments(comments, commentContainer)
     nameForm.value = ""
+    nameForm.classList.remove("new-comment__error")
+    const commentForm = document.getElementById("newCommentBody")
     commentForm.value = ""
+    commentForm.classList.remove("new-comment__error")
 }})
 

@@ -1,19 +1,21 @@
 @font-face {
-  font-family: regular;
+  font-family: Avenir;
   src: url(../../assets/Font/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
 }
 @font-face {
-  font-family: demi;
+  font-family: Avenir;
   src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
   font-weight: 600;
 }
 @font-face {
-  font-family: reg-bold;
+  font-family: Avenir;
   src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
-  font-weight: bold;
+  font-weight: 700;
 }
 * {
-  font-family: regular;
+  font-family: Avenir;
+  font-weight: 400;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -83,21 +85,22 @@
 .header__nav-item {
   width: 100%;
   text-align: center;
-  margin-top: 1.5rem;
   padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .header__nav-item {
-    margin: 0 1rem 0rem 1rem;
+    margin: 1.25rem 1rem 0rem 1rem;
   }
 }
 .header__nav-link {
+  height: 2.4375rem;
+  width: 8.125rem;
   text-decoration: none;
   color: #E1E1E1;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
-  font-family: regular;
+  font-weight: 400;
+  font-weight: 400;
 }
 .header__nav-link:hover {
   color: #FFFFFF;
@@ -106,25 +109,25 @@
   .header__nav-link {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: regular;
+    font-weight: 400;
   }
 }
 .header__nav-item--active {
   color: #FFFFFF;
   border-bottom: 3px solid #FFFFFF;
-  font-family: reg-bold;
+  font-weight: 700;
 }
 .header__nav-item--inactive {
-  font-family: regular;
+  font-weight: 400;
 }
 .header__nav-item--inactive:hover {
   color: #FFFFFF;
   border-bottom: 3px solid #FFFFFF;
-  font-family: reg-bold;
+  font-weight: 700;
 }
 
 .blank-space {
-  height: 6rem;
+  height: 4.875rem;
 }
 @media (min-width: 768px) {
   .blank-space {
@@ -169,9 +172,9 @@
 .hero-banner__subheader {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: demi;
+  font-weight: 600;
   color: #FFFFFF;
-  font-family: regular;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 .hero-banner__title {
@@ -179,13 +182,13 @@
   margin: 0;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: reg-bold;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .hero-banner__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-family: reg-bold;
+    font-weight: 700;
   }
 }
 .hero-banner__soundcloud {
@@ -213,13 +216,13 @@
   color: #FFFFFF;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: reg-bold;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .footer__heading {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-family: reg-bold;
+    font-weight: 700;
     margin-right: 1rem;
   }
 }
@@ -269,19 +272,19 @@
   color: #FFFFFF;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
+  font-weight: 400;
   margin: 0.5rem 0;
 }
 @media (min-width: 768px) {
   .footer__contact-details {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-family: regular;
+    font-weight: 400;
     margin: 0.5rem 0;
   }
 }
 .footer__contact-details--name {
-  font-family: demi;
+  font-weight: 600;
   margin: 0;
 }
 .footer__contact-details--link {
@@ -308,13 +311,13 @@
   color: #FFFFFF;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .copy__message {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-family: regular;
+    font-weight: 400;
   }
 }
 
@@ -337,7 +340,7 @@
   color: #323232;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: reg-bold;
+  font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -347,7 +350,7 @@
     margin-bottom: 2.25rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-family: reg-bold;
+    font-weight: 700;
   }
 }
 .about__img {
@@ -370,27 +373,27 @@
   color: #323232;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
+  font-weight: 400;
   margin: 1rem 0;
 }
 @media (min-width: 768px) {
   .about__body {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: regular;
+    font-weight: 400;
     margin-top: 0;
   }
 }
 .about__quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: demi;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .about__quote {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-family: demi;
+    font-weight: 600;
     margin-top: 1rem;
   }
 }
@@ -402,26 +405,26 @@
 .about__quote-author {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .about__quote-author {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: regular;
-    font-family: demi;
+    font-weight: 400;
+    font-weight: 600;
   }
 }
 .about__subheading {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: demi;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .about__subheading {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-family: demi;
+    font-weight: 600;
   }
 }
 
@@ -432,6 +435,11 @@
 @media (min-width: 768px) {
   .gallery {
     margin: 2.25rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery {
+    padding-bottom: 3rem;
   }
 }
 @media (min-width: 1280px) {
@@ -451,13 +459,13 @@
 .gallery__heading {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: reg-bold;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .gallery__heading {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-family: reg-bold;
+    font-weight: 700;
   }
 }
 .gallery__img-section {
@@ -472,6 +480,7 @@
     justify-content: center;
     align-items: center;
     gap: 1.125rem;
+    margin: 0 1rem 2.25rem 1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -500,11 +509,30 @@
 .comment {
   margin: 1.5rem 1rem 1rem 1rem;
 }
+@media (min-width: 768px) {
+  .comment {
+    margin: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment {
+    width: 73.75rem;
+    margin: 2.25rem auto;
+  }
+}
 .comment__header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: reg-bold;
-  font-family: demi;
+  font-weight: 700;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .comment__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    font-weight: 600;
+  }
 }
 
 .new-comment {
@@ -512,6 +540,13 @@
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #E1E1E1;
+}
+@media (min-width: 768px) {
+  .new-comment {
+    justify-content: center;
+    margin: 2.25rem 4.5rem 0rem 4.5rem;
+    width: 33.25rem;
+  }
 }
 .new-comment__icon {
   background-position: center;
@@ -523,14 +558,27 @@
   border-radius: 2rem;
   margin: 1.375rem 1rem 0 0;
 }
+@media (min-width: 768px) {
+  .new-comment__form-wrapper {
+    width: 30rem;
+  }
+}
 .new-comment__subheader {
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-family: reg-bold;
+  font-weight: 700;
   color: #AFAFAF;
-  font-family: demi;
+  font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+}
+@media (min-width: 768px) {
+  .new-comment__subheader {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-weight: 600;
+  }
 }
 .new-comment__subheader--name {
   margin-top: 0;
@@ -557,6 +605,13 @@
   outline: none !important;
   border: 1px solid #000000;
 }
+@media (min-width: 768px) {
+  .new-comment__name-form {
+    width: 30rem;
+    height: 3rem;
+    padding: 1rem;
+  }
+}
 .new-comment__error {
   border: 1px solid #D22D2D;
 }
@@ -567,7 +622,7 @@
   border: 0.0625rem solid #E1E1E1;
   border-radius: 0.25rem;
   height: 2.25rem;
-  padding: 12px;
+  padding: 0.75rem;
   resize: none;
 }
 .new-comment__comment-form::-moz-placeholder {
@@ -582,6 +637,13 @@
 .new-comment__comment-form:focus {
   outline: none !important;
   border: 1px solid #000000;
+}
+@media (min-width: 768px) {
+  .new-comment__comment-form {
+    width: 30rem;
+    height: 3rem;
+    padding: 1rem;
+  }
 }
 .new-comment__error {
   border: 1px solid #D22D2D;
@@ -598,7 +660,7 @@
   color: #FFFFFF;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: demi;
+  font-weight: 600;
   border: 0;
 }
 .new-comment__btn-section::-moz-placeholder {
@@ -613,12 +675,27 @@
   text-align: center;
   margin: 0.5rem;
 }
+@media (min-width: 768px) {
+  .new-comment__btn-section {
+    margin-left: auto;
+    margin-bottom: 1.5rem;
+    width: 10rem;
+  }
+}
 
 .comments-section {
   margin: 1rem 0;
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #E1E1E1;
+}
+@media (min-width: 768px) {
+  .comments-section {
+    margin: 0rem 4.5rem 1rem 4.5rem;
+  }
+}
+.comments-section__container {
+  width: 33.25rem;
 }
 .comments-section__comment {
   display: flex;
@@ -635,6 +712,12 @@
 .comments-section__comment-section {
   width: 14.75rem;
 }
+@media (min-width: 768px) {
+  .comments-section__comment-section {
+    width: 30rem;
+    margin-bottom: 1rem;
+  }
+}
 .comments-section__comment-heading {
   display: flex;
   justify-content: space-between;
@@ -642,22 +725,45 @@
 .comments-section__top-left {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
-  font-family: demi;
+  font-weight: 400;
+  font-weight: 600;
   color: #323232;
+}
+@media (min-width: 768px) {
+  .comments-section__top-left {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 600;
+  }
 }
 .comments-section__top-right {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
+  font-weight: 400;
   color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .comments-section__top-right {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
 }
 .comments-section__comment-body {
   max-width: 14.75rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: regular;
+  font-weight: 400;
   color: #323232;
   margin: 0.5rem 0 0.5rem 0;
   overflow-wrap: break-word;
+}
+@media (min-width: 768px) {
+  .comments-section__comment-body {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    max-width: 30rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

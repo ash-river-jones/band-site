@@ -19,7 +19,7 @@
 
     &__heading{
         @include m-subheader;
-        font-family: reg-bold;
+        font-weight: 700;
         color: $bandsite-black;
         margin: 1.5rem 1rem 1rem 1rem;
     }
@@ -44,7 +44,7 @@
     &__info-heading{
         @include m-label-button;
         color: $silver;
-        font-family: demi;
+        font-weight: 600;
     }
 
     &__dates{
@@ -54,7 +54,7 @@
     &__date{
         @include m-body;
         color: $bandsite-black;
-        font-family: demi;
+        font-weight: 600;
     }
 
     &__venues{

@@ -3,7 +3,8 @@
 @use './typography' as *;
 
 * {
-    font-family: regular;
+    font-family: Avenir;
+    font-weight: 400;
     box-sizing:border-box;
     padding: 0;
     margin: 0;   
@@ -68,20 +69,21 @@
     &__nav-item{
         width: 100%;
         text-align: center;
-        margin-top: 1.5rem;
         padding-bottom: 1rem;
 
         @include tablet{
-            margin: 0 1rem 0rem 1rem;
+            margin: 1.25rem 1rem 0rem 1rem;
 
         }
     }
 
     &__nav-link{
+        height: 2.4375rem;
+        width: 8.125rem;
         text-decoration: none;
         color: $mercury;
         @include m-body;
-        font-family: regular;
+        font-weight: 400;
 
         &:hover{
             color: $white;
@@ -95,21 +97,22 @@
     &__nav-item--active{
         color: $white;
         border-bottom: 3px solid $white;
-        font-family: reg-bold;
+        font-weight: 700;
     }
 
     &__nav-item--inactive{
-        font-family: regular;
+        font-weight: 400;
             
         &:hover{
             color: $white;
             border-bottom: 3px solid $white;
-            font-family: reg-bold;        }
+            font-weight: 700;
+        }
     }
 }
 
 .blank-space{
-    height: 6rem;
+    height: 4.875rem;
 
     @include tablet{
         height: 4.4375rem;
@@ -154,7 +157,7 @@
     &__subheader{
         @include m-subheader;
         color: $white;
-        font-family: regular;
+        font-weight: 400;
         margin-bottom: 1rem;
     }
 
@@ -260,7 +263,7 @@
     }
 
     &__contact-details--name{
-        font-family: demi;
+        font-weight: 600;
         margin: 0;
     }
 
