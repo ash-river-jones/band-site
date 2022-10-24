@@ -132,7 +132,7 @@ const wrapper = document.querySelector(".show__container")
 
 wrapper.addEventListener("click",function(event){
     
-    const isShow =event.target.nodeName === 'SECTION'
+    const isShow = event.target.nodeName === 'SECTION'
     
     if(!isShow){
         return;

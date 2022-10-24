@@ -112,7 +112,7 @@ if(event.target.name.value ==="" && event.target.comment.value ===""){
     }
 
     comments.unshift(newComment)
-    displayComment(comments, commentContainer)
+    addComments(comments, commentContainer)
     nameForm.value = ""
     nameForm.classList.remove("new-comment__error")
     const commentForm = document.getElementById("newCommentBody")
