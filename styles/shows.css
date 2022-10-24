@@ -177,6 +177,13 @@
   .hero-banner__title-section {
     width: 80rem;
     margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-banner__title-heading {
+    margin-left: 5rem;
   }
 }
 .hero-banner__subheader {
@@ -210,6 +217,11 @@
     width: 80%;
   }
 }
+@media (min-width: 1280px) {
+  .hero-banner__title {
+    width: 65%;
+  }
+}
 .hero-banner__soundcloud {
   max-height: 15vh;
   margin-top: 1rem;
@@ -218,6 +230,12 @@
   .hero-banner__soundcloud {
     width: 50vw;
     margin-top: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-banner__soundcloud {
+    width: 35vw;
+    margin-right: 5rem;
   }
 }
 
@@ -354,12 +372,30 @@
     margin: 2.25rem 2.25rem 1rem 2.25rem;
   }
 }
+@media (min-width: 1280px) {
+  .shows {
+    margin: 2.25rem auto 1rem auto;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__wrapper {
+    max-width: 80rem;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  }
+}
 .shows__heading {
   margin: 2.25rem 1rem 2rem 1rem;
 }
 @media (min-width: 768px) {
   .shows__heading {
     margin: 3rem 0rem 0rem 0rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__heading {
+    margin-right: 16rem;
   }
 }
 .shows__header {
@@ -402,10 +438,16 @@
     margin: 0 9rem 0 0.5rem;
   }
 }
+@media (min-width: 1280px) {
+  .tablet-show-info-heading__section {
+    margin: 0 12.875rem 0 0.5rem;
+  }
+}
 
 .show__wrapper {
   margin: 1rem 0;
   border-bottom: 1px solid #E1E1E1;
+  z-index: 100;
 }
 @media (min-width: 768px) {
   .show__wrapper {
@@ -427,6 +469,11 @@
     width: 10.875rem;
   }
 }
+@media (min-width: 1280px) {
+  .show__info {
+    width: 14.9375rem;
+  }
+}
 .show__info-heading {
   font-size: 0.625rem;
   line-height: 1.25rem;
@@ -437,6 +484,9 @@
 @media (min-width: 768px) {
   .show__info-heading {
     display: none;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
   }
 }
 .show__date {
@@ -446,17 +496,38 @@
   color: #323232;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .show__date {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
 .show__venue {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   color: #323232;
 }
+@media (min-width: 768px) {
+  .show__venue {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
 .show__location {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   color: #323232;
+}
+@media (min-width: 768px) {
+  .show__location {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
 }
 .show__btn-section {
   background-color: #323232;
@@ -469,7 +540,7 @@
 @media (min-width: 768px) {
   .show__btn-section {
     justify-self: flex-end;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 1rem 1rem 0;
   }
 }
 .show__btn {

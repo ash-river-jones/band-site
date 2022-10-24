@@ -158,6 +158,14 @@
         @include desktop{
             width: 80rem;
             margin-inline: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__title-heading{
+        @include desktop{
+            margin-left: 5rem;
         }
     }
 
@@ -181,6 +189,9 @@
             font-weight: 600;
             width: 80%;
         }
+        @include desktop {
+            width: 65%;
+        }
     }
 
     &__soundcloud{
@@ -190,6 +201,10 @@
         @include tablet {
             width: 50vw;
             margin-top: 2.25rem;
+        }
+        @include desktop{
+            width: 35vw;
+            margin-right: 5rem;
         }
     }
 }
