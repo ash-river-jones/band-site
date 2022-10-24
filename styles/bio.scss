@@ -184,6 +184,9 @@
         margin: 2.25rem 4.5rem 0rem 4.5rem;
         width: 33.25rem;
     }
+    @include desktop {
+        margin: 2.25rem auto 0 auto;
+    }
 
 
     &__icon-section{
@@ -316,6 +319,11 @@
     @include tablet{
         margin: 0rem 4.5rem 1rem 4.5rem;
 
+    }
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        border: none;
     }
 
     &__container{

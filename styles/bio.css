@@ -548,6 +548,11 @@
     width: 33.25rem;
   }
 }
+@media (min-width: 1280px) {
+  .new-comment {
+    margin: 2.25rem auto 0 auto;
+  }
+}
 .new-comment__icon {
   background-position: center;
   background-size: cover;
@@ -692,6 +697,13 @@
 @media (min-width: 768px) {
   .comments-section {
     margin: 0rem 4.5rem 1rem 4.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-section {
+    display: flex;
+    justify-content: center;
+    border: none;
   }
 }
 .comments-section__container {
