@@ -43,7 +43,7 @@ for (let i = 0; i < showList.length; i++){
 const show = document.createElement("div")
 show.classList.add("show")
 
-const showWrapper = document.createElement("div")
+const showWrapper = document.createElement("section")
 showWrapper.classList.add("show__wrapper")
 
 show.appendChild(showWrapper)
@@ -122,3 +122,26 @@ showContainer.appendChild(showWrapper)
 
 const showsWrapper = document.querySelector(".show__container")
 addShow(shows, showsWrapper)
+
+
+// Active show row background
+
+let prevShow = null
+
+const wrapper = document.querySelector(".show__container")
+
+wrapper.addEventListener("click",function(event){
+    
+    const isShow =event.target.nodeName === 'SECTION'
+    
+    if(!isShow){
+        return;
+    }
+
+    event.target.classList.add("active")
+    
+    if (prevShow !== null){
+        prevShow.classList.remove("active")
+    }
+    prevShow = event.target
+})

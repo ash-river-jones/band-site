@@ -9,7 +9,9 @@
 
 .shows{
     margin: 0 0;
-
+    @include tablet {
+        margin: 2.25rem 2.25rem 1rem 2.25rem;
+    }
 
     &__wrapper{
         // margin-left: 1rem;
@@ -18,14 +20,43 @@
     }
 
     &__heading{
-        @include m-subheader;
-        font-weight: 700;
-        color: $bandsite-black;
-        margin: 1.5rem 1rem 1rem 1rem;
+        margin: 2.25rem 1rem 2rem 1rem;
+        @include tablet{
+            margin: 3rem 0rem 0rem 0rem;
+        }   
     }
 
     &__header{
+        @include m-section-header;
+        font-weight: 700;
+        color: $bandsite-darkblack;
+        margin-left: 0.5rem;
+        @include tablet {
+            @include dt-section-header;
+            font-weight: 600;
+        }
+    }
+}
 
+.active{
+    background-color: $mercury;
+}
+
+.tablet-show-info-heading{
+    display: none;
+    @include tablet {
+        margin-top: 2.25rem;
+        display: flex;
+    }
+
+    &__section{
+        
+    @include tablet{    
+        @include dt-label-button;
+        color: $silver;
+        font-weight: 600;
+        margin: 0 9rem 0 0.5rem;
+        }
     }
 }
 
@@ -34,17 +65,32 @@
     &__wrapper{
         margin: 1rem 0;
         border-bottom: 1px solid $mercury;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+        }
+        &:hover{
+            background-color: $alabaster;
+        }
     }
 
     &__info{
-        // margin-top: 1rem;
         margin: 1rem 1rem 0 1rem;
+        @include tablet {
+            justify-self: flex-start;
+            margin: 1rem 0 0 .625rem;
+            width: 10.875rem;
+        }
     }
 
     &__info-heading{
         @include m-label-button;
         color: $silver;
         font-weight: 600;
+        @include tablet {
+            display: none;
+        }
     }
 
     &__dates{
@@ -82,6 +128,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include tablet {
+            justify-self: flex-end;
+            margin: 1rem 0 1rem 0;
+        }
     }
 
     &__btn{
@@ -90,6 +140,9 @@
         text-align: center;
         margin: .5rem auto;
         color: $white;
-
+        @include tablet {
+            padding: 0rem 1.75rem;
+            
+        }
     }
 }

@@ -149,11 +149,21 @@
   width: auto;
   height: 30vw;
 }
+@media (min-width: 768px) {
+  .hero-banner__wrapper {
+    height: 30.5rem;
+  }
+}
 .hero-banner__background {
   background-color: rgba(50, 50, 50, 0.5);
   width: 100vw;
   display: inline-flex;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .hero-banner__background {
+    height: 30.5rem;
+  }
 }
 .hero-banner__title-section {
   margin: 1rem;
@@ -177,6 +187,13 @@
   font-weight: 400;
   margin-bottom: 1rem;
 }
+@media (min-width: 768px) {
+  .hero-banner__subheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
 .hero-banner__title {
   color: #FFFFFF;
   margin: 0;
@@ -189,11 +206,19 @@
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-weight: 700;
+    font-weight: 600;
+    width: 80%;
   }
 }
 .hero-banner__soundcloud {
   max-height: 15vh;
   margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .hero-banner__soundcloud {
+    width: 50vw;
+    margin-top: 2.25rem;
+  }
 }
 
 .footer {

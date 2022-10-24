@@ -133,6 +133,10 @@
         min-height: 45vh;
         width: auto;
         height: 30vw;
+        @include tablet{
+            height: 30.5rem;
+
+        }
     }
 
     &__background{
@@ -140,6 +144,9 @@
         width: 100vw;
         display: inline-flex;        
         align-items: center;
+        @include tablet{
+            height: 30.5rem;
+        }
     }
 
     &__title-section{
@@ -159,6 +166,9 @@
         color: $white;
         font-weight: 400;
         margin-bottom: 1rem;
+        @include tablet {
+            @include dt-subheader;
+        }
     }
 
     &__title{
@@ -168,12 +178,19 @@
 
         @include tablet{
             @include dt-page-header;
+            font-weight: 600;
+            width: 80%;
         }
     }
 
     &__soundcloud{
         max-height: 15vh;
         margin-top: 1rem;
+
+        @include tablet {
+            width: 50vw;
+            margin-top: 2.25rem;
+        }
     }
 }
 
