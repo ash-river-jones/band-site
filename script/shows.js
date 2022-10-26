@@ -1,42 +1,11 @@
-const shows = [
-{
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-},
-{
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-},
-{
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-},
-{
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-},
-{
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-},
-{
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-}
-]
 
+var apiKey = "?api_key=a3a286f3-5e28-43cf-b547-6ac20705ab03z"
 
-const addShow = function(showList, showContainer){
+const addShow = function(showsArray, showContainer){
     
     showContainer.innerText = ""
 
-for (let i = 0; i < showList.length; i++){
+for (let i = 0; i < showsArray.length; i++){
 
 // Show container element creation
 
@@ -59,7 +28,10 @@ showInfoHeadingDate.innerText = ("DATE")
 
 const showDate = document.createElement("div")
 showDate.classList.add("show__date")
-showDate.innerText = showList[i].date
+
+const dateFormat = new Date(showsArray[i].date)
+const formattedDate = dateFormat.toLocaleDateString("en-gb")
+showDate.innerText = formattedDate
 
 showInfoDate.appendChild(showInfoHeadingDate)
 showInfoDate.appendChild(showDate)
@@ -75,7 +47,7 @@ showInfoHeadingVenue.innerText = ("VENUE")
 
 const showVenue = document.createElement("div")
 showVenue.classList.add("show__venue")
-showVenue.innerText = showList[i].venue
+showVenue.innerText = showsArray[i].place
 
 showInfoVenue.appendChild(showInfoHeadingVenue)
 showInfoVenue.appendChild(showVenue)
@@ -91,7 +63,7 @@ showInfoHeadingLocation.innerText = ("LOCATION")
 
 const showLocation = document.createElement("div")
 showLocation.classList.add("show__location")
-showLocation.innerText = showList[i].location
+showLocation.innerText = showsArray[i].location
 
 showInfoLocation.appendChild(showInfoHeadingLocation)
 showInfoLocation.appendChild(showLocation)
@@ -121,8 +93,13 @@ showContainer.appendChild(showWrapper)
 }
 
 const showsWrapper = document.querySelector(".show__container")
-addShow(shows, showsWrapper)
 
+const showsURL = "https://project-1-api.herokuapp.com/showdates" + apiKey
+axios.get(showsURL).then(response =>{
+    const showsArray = response.data
+    console.log(showsArray)
+    addShow(showsArray,showsWrapper)
+})
 
 // Active show row background
 

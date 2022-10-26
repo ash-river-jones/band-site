@@ -1,26 +1,12 @@
-const comments = [
-{
-    name: "Connor Walton",
-    date: "02/17/2021",
-    comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-},
-{
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-},
-{
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-}
-]
 
-const addComments = function(commentList, commentContainer){
+
+var apiKey = "?api_key=a3a286f3-5e28-43cf-b547-6ac20705ab03"
+
+const addComments = function(comments, commentContainer){
 
     commentContainer.innerText = ""
     
-for (let i =0; i < commentList.length; i++){
+for (let i =0; i < comments.length; i++){
 // Comment container
 
 const comment = document.createElement("div")
@@ -51,7 +37,10 @@ topLeft.innerText = comments[i].name
 
 const topRight = document.createElement("div")
 topRight.classList.add("comments-section__top-right")
-topRight.innerText = comments[i].date
+const dateFormat = new Date(comments[i].timestamp)
+const formattedDate = dateFormat.toLocaleDateString("en-gb")
+topRight.innerText = formattedDate
+
 
 commentHeading.appendChild(topLeft)
 commentHeading.appendChild(topRight)
@@ -77,8 +66,22 @@ commentContainer.appendChild(comment)
 }
 
 const commentContainer = document.querySelector(".comments-section__container")
-addComments(comments, commentContainer)
 
+const commentURL = "https://project-1-api.herokuapp.com/comments" + apiKey
+
+function getComments(){
+axios.get(commentURL).then(response =>{
+    const commentArray = response.data
+    console.log(commentArray)
+    
+    const sortedCommentArray = commentArray.sort(
+        (a,b) => b.timestamp -a.timestamp)
+    addComments (sortedCommentArray,commentContainer)
+
+
+})}
+
+getComments()
 
 const nameForm = document.getElementById("newCommentName")
 const commentForm = document.getElementById("comment-form")
@@ -104,15 +107,21 @@ if(event.target.name.value ==="" && event.target.comment.value ===""){
     commentForm.classList.add("new-comment__error")
     return;
 } else {
-    
+
     const newComment = {
         name: event.target.name.value,
-        date: date.toLocaleDateString(),
         comment: event.target.comment.value
     }
+    axios
+    .post(commentURL, newComment)
+    .then(response => {
+        console.log(response)
+        const commentArray = response.data
 
-    comments.unshift(newComment)
-    addComments(comments, commentContainer)
+        addComments(commentArray, commentContainer)
+        getComments()
+    })
+
     nameForm.value = ""
     nameForm.classList.remove("new-comment__error")
     const commentForm = document.getElementById("newCommentBody")
