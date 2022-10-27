@@ -567,16 +567,16 @@
   height: auto;
   transition: filter 0.375s, transform 0.5s, border-radius 0.5s;
 }
-.gallery__img:hover {
-  filter: brightness(80%);
-  transform: scale(1.03);
-  border-radius: 0.5rem;
-}
 @media (min-width: 768px) {
   .gallery__img {
     width: 30%;
     margin: 0;
   }
+}
+.gallery__img:hover {
+  filter: brightness(80%);
+  transform: scale(1.03);
+  border-radius: 0.5rem;
 }
 
 .comment {
@@ -836,13 +836,17 @@
   }
 }
 .comments-section__top-right {
+  display: flex;
+  gap: 0.75rem;
+}
+.comments-section__top-right--date {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   color: #AFAFAF;
 }
 @media (min-width: 768px) {
-  .comments-section__top-right {
+  .comments-section__top-right--date {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;

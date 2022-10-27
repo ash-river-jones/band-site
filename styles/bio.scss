@@ -377,10 +377,20 @@
     }
 
     &__top-right{
-        @include m-body;
-        color: $silver;
-        @include tablet{
-            @include dt-body;
+        display: flex;
+        gap: .75rem;
+        &--date{
+            @include m-body;
+            color: $silver;
+            @include tablet{
+                @include dt-body;
+            }
+        }
+        &--delete-icon{
+
+        }
+        &--like-icon{
+
         }
     }
 

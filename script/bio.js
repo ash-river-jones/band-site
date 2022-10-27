@@ -36,10 +36,26 @@ const addComments = function (comments, commentContainer) {
 
         const topRight = document.createElement("div")
         topRight.classList.add("comments-section__top-right")
+
+
+        const topRightDate = document.createElement("div")
+        topRightDate.classList.add("comments-section__top-right--date")
         const dateFormat = new Date(comments[i].timestamp)
         const formattedDate = dateFormat.toLocaleDateString("en-us")
-        topRight.innerText = formattedDate
+        topRightDate.innerText = formattedDate
 
+        const topRightDelete = document.createElement("img")
+        topRightDelete.classList.add("comments-section__top-right--delete-icon")
+        topRightDelete.src = "./assets/Icons/SVG/icon-delete.svg"
+
+
+        const topRightLike = document.createElement("img")
+        topRightLike.classList.add("comments-section__top-right--like-icon")
+        topRightLike.src = "./assets/Icons/SVG/icon-like.svg"
+
+        topRight.appendChild(topRightLike)
+        topRight.appendChild(topRightDelete)
+        topRight.appendChild(topRightDate)
 
         commentHeading.appendChild(topLeft)
         commentHeading.appendChild(topRight)
@@ -128,3 +144,18 @@ commentForm.addEventListener("submit", function (event) {
     }
 })
 
+// Like comment
+
+const like = document.querySelector(".comments-section__top-right--like-icon")
+let commentID = "" 
+let commentLikeURL = "https://project-1-api.herokuapp.com/comments/" + commentID + apiKey
+
+like.addEventListener("click", function (event){
+
+    commentID = event.target.id.value
+    console.log(event.target.id.value)
+
+    axios
+        .put(commentLikeURL)
+        .then
+})
