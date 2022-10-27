@@ -280,7 +280,6 @@
         @include tablet{
             margin: 0 2.25rem;
             display: flex;
-            // justify-content: space-between;
         }
     }
 
@@ -293,7 +292,6 @@
             margin-right: 4.5rem;
         }
     }
-    // 230.14
 
     &__contact-details{
         color: $white;
