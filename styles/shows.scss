@@ -21,7 +21,6 @@
             justify-content: center;
             margin-inline: auto;
         }
-
     }
 
     &__heading{
@@ -110,8 +109,6 @@
         }
     }
 
-
-
     &__date{
         @include m-body;
         color: $bandsite-black;
@@ -122,8 +119,6 @@
         }
     }
 
-
-
     &__venue{
         @include m-body;
         color: $bandsite-black;
@@ -131,8 +126,6 @@
             @include dt-body;
         }
     }
-
-  
 
     &__location{
         @include m-body;

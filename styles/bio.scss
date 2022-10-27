@@ -6,15 +6,12 @@
 .about{
     background-color:$white ;
     margin: 1rem;
-
     @include tablet{
         margin: 2.25rem;
     }
     @include desktop{
         width: 80rem;
-        
         margin-inline: auto;
-
     }
 
     &__heading{
@@ -145,27 +142,25 @@
         width: 100%;
         height: auto;
         transition: filter .375s, transform .5s, border-radius .5s;
+        @include tablet{
+            width: 30%;
+            margin: 0;
+        }
 
         &:hover{
             filter: brightness(80%);
             transform: scale(1.03);
             border-radius: .5rem;
         }
-
-        @include tablet{
-            width: 30%;
-            margin: 0;
-        }
+        
     }
 }
 
 .comment{
     margin: 1.5rem auto 1rem auto;
-
     @include tablet {
         margin: 2.25rem;
     }
-
     @include desktop {
         width: 73.75rem; 
         margin: 2.25rem auto;
@@ -175,7 +170,6 @@
         margin-left: 1rem;
         display: flex;
         justify-content: flex-start;
-
     }
 
     &__header{
@@ -205,7 +199,6 @@
 
     &__icon-section{
         border-bottom: 1px solid $mercury;
-
     }
 
     &__icon{
@@ -217,7 +210,6 @@
         border-radius: 2rem;
         margin: 1.375rem 1rem 0 0;
         @include tablet {
-            
         }
     }
 
@@ -237,7 +229,6 @@
         @include tablet{
             @include dt-label-button;
             font-weight: 600;
-
         }
     }
 
@@ -296,6 +287,7 @@
             padding: 1rem;
         }
     }
+
     &__error{
         border: 1px solid #D22D2D;
     }
@@ -316,7 +308,6 @@
         &::placeholder{
             text-align: center;
             margin: .5rem;
-            
         }
         @include tablet {
             margin-left: auto;
@@ -333,7 +324,6 @@
     flex-direction: row;
     @include tablet{
         margin: 0rem 4.5rem 1rem 4.5rem;
-
     }
     @include desktop {
         display: flex;
@@ -349,15 +339,10 @@
         display: flex;
         justify-content: center;
         margin-top: 1rem;
-        @include tablet {
-            
-        }
     }
 
     &__icon-section{
         border-bottom: 1px solid $mercury;
-
-
     }
 
     &__icon{
@@ -371,10 +356,8 @@
     &__comment-section{
         width: 14.75rem;
         border-bottom: 1px solid $mercury;
-
         @include tablet {
             width: 30rem;
-
         }
     }
 
@@ -408,11 +391,9 @@
         padding: 0.5rem 0 .5rem 0;
         margin-bottom: 1rem;
         overflow-wrap: break-word;
-
         @include tablet{
             @include dt-body;
             max-width: 30rem;
-
         }
     }
 }
