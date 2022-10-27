@@ -191,6 +191,7 @@
         }
         @include desktop {
             width: 65%;
+            margin-left: 4.5rem;
         }
     }
 
@@ -222,7 +223,7 @@
 
     &__wrapper{
         @include desktop{
-            width: 80rem;
+            width: 77rem;
             margin-inline: auto;
         }
     }
@@ -241,6 +242,9 @@
             @include dt-section-header;
             margin-right: 1rem;
         }
+        @include desktop{
+            margin-right: 3.0913rem;
+        }
     }
 
     &__social-icon-list{
@@ -254,6 +258,9 @@
             width: auto;
             max-width: 28%;
             justify-content: normal;
+        }
+        @include desktop {
+            gap: 2.25rem;
         }
     }
 
@@ -273,16 +280,20 @@
         @include tablet{
             margin: 0 2.25rem;
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
         }
     }
 
     &__contact-info{
         margin: 1rem 0;
         @include tablet{
-            margin: 0;
+            margin: 0 2.3487rem 0 0 ;
+        }
+        @include desktop{
+            margin-right: 4.5rem;
         }
     }
+    // 230.14
 
     &__contact-details{
         color: $white;

@@ -12,7 +12,9 @@
     }
     @include desktop{
         width: 80rem;
+        
         margin-inline: auto;
+
     }
 
     &__heading{
@@ -25,6 +27,9 @@
             margin-bottom: 2.25rem;
             @include dt-section-header;
         }
+        @include desktop{
+            margin-inline: 2.25rem;
+        }
     }
 
     &__img{
@@ -34,6 +39,9 @@
     &__body-section{
         @include tablet {
             margin: 0 4rem;
+        }
+        @include desktop{
+            margin-inline: 6.75rem;
         }
     }
 
@@ -110,6 +118,9 @@
         @include tablet{
             @include dt-section-header;
         }
+        @include desktop{
+            margin-inline: 2.25rem;
+        }
     }
 
     &__img-section{
@@ -125,7 +136,7 @@
             margin: 0 1rem 2.25rem 1rem;     
         }
         @include desktop{
-            margin: 0;
+            margin-inline: 2.25rem;
         }
     }
 
@@ -149,7 +160,7 @@
 }
 
 .comment{
-    margin: 1.5rem 1rem 1rem 1rem;
+    margin: 1.5rem auto 1rem auto;
 
     @include tablet {
         margin: 2.25rem;
@@ -161,6 +172,9 @@
     }
     
     &__heading{
+        margin-left: 1rem;
+        display: flex;
+        justify-content: flex-start;
 
     }
 
@@ -178,7 +192,7 @@
     margin: 1rem 0;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid $mercury;
+    justify-content: center;
     @include tablet {
         justify-content: center;
         margin: 2.25rem 4.5rem 0rem 4.5rem;
@@ -190,6 +204,7 @@
 
 
     &__icon-section{
+        border-bottom: 1px solid $mercury;
 
     }
 
@@ -207,6 +222,7 @@
     }
 
     &__form-wrapper{
+        border-bottom: 1px solid $mercury;
         @include tablet {
             width: 30rem
         }
@@ -315,7 +331,6 @@
     margin: 1rem 0;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid $mercury;
     @include tablet{
         margin: 0rem 4.5rem 1rem 4.5rem;
 
@@ -332,14 +347,16 @@
 
     &__comment{
         display: flex;
+        justify-content: center;
         margin-top: 1rem;
-        border-bottom: 1px solid $mercury;
         @include tablet {
             
         }
     }
 
     &__icon-section{
+        border-bottom: 1px solid $mercury;
+
 
     }
 
@@ -353,9 +370,11 @@
 
     &__comment-section{
         width: 14.75rem;
+        border-bottom: 1px solid $mercury;
+
         @include tablet {
             width: 30rem;
-            margin-bottom: 1rem;
+
         }
     }
 
@@ -386,11 +405,14 @@
         max-width: 14.75rem;
         @include m-body;
         color: $bandsite-black;
-        margin: 0.5rem 0 .5rem 0;
+        padding: 0.5rem 0 .5rem 0;
+        margin-bottom: 1rem;
         overflow-wrap: break-word;
+
         @include tablet{
             @include dt-body;
             max-width: 30rem;
+
         }
     }
 }

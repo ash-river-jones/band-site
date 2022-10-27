@@ -1,85 +1,84 @@
 
-
 var apiKey = "?api_key=a3a286f3-5e28-43cf-b547-6ac20705ab03"
 
-const addComments = function(comments, commentContainer){
+const addComments = function (comments, commentContainer) {
 
     commentContainer.innerText = ""
-    
-for (let i =0; i < comments.length; i++){
-// Comment container
 
-const comment = document.createElement("div")
-comment.classList.add("comments-section__comment")
+    for (let i = 0; i < comments.length; i++) {
+        // Comment container
 
-// Icon Section
+        const comment = document.createElement("div")
+        comment.classList.add("comments-section__comment")
 
-const iconSection = document.createElement("div")
-iconSection.classList.add("comments-section__icon-section")
+        // Icon Section
 
-const icon = document.createElement("div")
-icon.classList.add("comments-section__icon")
+        const iconSection = document.createElement("div")
+        iconSection.classList.add("comments-section__icon-section")
 
-iconSection.appendChild(icon)
+        const icon = document.createElement("div")
+        icon.classList.add("comments-section__icon")
 
-// Comment Section (Container)
+        iconSection.appendChild(icon)
 
-const commentSection = document.createElement("div")
-commentSection.classList.add("comments-section__comment-section")
+        // Comment Section (Container)
 
-// Comment Section -- heading
-const commentHeading = document.createElement("div")
-commentHeading.classList.add("comments-section__comment-heading")
+        const commentSection = document.createElement("div")
+        commentSection.classList.add("comments-section__comment-section")
 
-const topLeft = document.createElement("div")
-topLeft.classList.add("comments-section__top-left")
-topLeft.innerText = comments[i].name
+        // Comment Section -- heading
+        const commentHeading = document.createElement("div")
+        commentHeading.classList.add("comments-section__comment-heading")
 
-const topRight = document.createElement("div")
-topRight.classList.add("comments-section__top-right")
-const dateFormat = new Date(comments[i].timestamp)
-const formattedDate = dateFormat.toLocaleDateString("en-gb")
-topRight.innerText = formattedDate
+        const topLeft = document.createElement("div")
+        topLeft.classList.add("comments-section__top-left")
+        topLeft.innerText = comments[i].name
 
-
-commentHeading.appendChild(topLeft)
-commentHeading.appendChild(topRight)
-
-// Comment Section -- body
-
-const commentBody = document.createElement("div")
-commentBody.classList.add("comments-section__comment-body")
-commentBody.innerText = comments[i].comment
-
-// Appending together 
-
-commentSection.appendChild(commentHeading)
-commentSection.appendChild(commentBody)
+        const topRight = document.createElement("div")
+        topRight.classList.add("comments-section__top-right")
+        const dateFormat = new Date(comments[i].timestamp)
+        const formattedDate = dateFormat.toLocaleDateString("en-us")
+        topRight.innerText = formattedDate
 
 
-comment.appendChild(iconSection)
-comment.appendChild(commentSection)
+        commentHeading.appendChild(topLeft)
+        commentHeading.appendChild(topRight)
 
-commentContainer.appendChild(comment)
+        // Comment Section -- body
 
-}
+        const commentBody = document.createElement("div")
+        commentBody.classList.add("comments-section__comment-body")
+        commentBody.innerText = comments[i].comment
+
+        // Appending together 
+
+        commentSection.appendChild(commentHeading)
+        commentSection.appendChild(commentBody)
+
+
+        comment.appendChild(iconSection)
+        comment.appendChild(commentSection)
+
+        commentContainer.appendChild(comment)
+
+    }
 }
 
 const commentContainer = document.querySelector(".comments-section__container")
 
 const commentURL = "https://project-1-api.herokuapp.com/comments" + apiKey
 
-function getComments(){
-axios.get(commentURL).then(response =>{
-    const commentArray = response.data
-    console.log(commentArray)
-    
-    const sortedCommentArray = commentArray.sort(
-        (a,b) => b.timestamp -a.timestamp)
-    addComments (sortedCommentArray,commentContainer)
+function getComments() {
+    axios.get(commentURL).then(response => {
+        const commentArray = response.data
+
+        const sortedCommentArray = commentArray.sort(
+            (a, b) => b.timestamp - a.timestamp)
+        addComments(sortedCommentArray, commentContainer)
 
 
-})}
+    })
+}
 
 getComments()
 
@@ -89,43 +88,43 @@ const date = new Date()
 
 
 
-commentForm.addEventListener("submit",function(event){
+commentForm.addEventListener("submit", function (event) {
     event.preventDefault()
 
-if(event.target.name.value ==="" && event.target.comment.value ===""){
-    const nameForm = document.getElementById("newCommentName")
-    const commentForm = document.getElementById("newCommentBody")
-    nameForm.classList.add("new-comment__error")
-    commentForm.classList.add("new-comment__error")
-    return;
-} else if(event.target.name.value ===""){
-    const nameForm = document.getElementById("newCommentName")
-    nameForm.classList.add("new-comment__error")
-    return;
-}else if(event.target.comment.value ===""){
-    const commentForm = document.getElementById("newCommentBody")
-    commentForm.classList.add("new-comment__error")
-    return;
-} else {
+    if (event.target.name.value === "" && event.target.comment.value === "") {
+        const nameForm = document.getElementById("newCommentName")
+        const commentForm = document.getElementById("newCommentBody")
+        nameForm.classList.add("new-comment__error")
+        commentForm.classList.add("new-comment__error")
+        return;
+    } else if (event.target.name.value === "") {
+        const nameForm = document.getElementById("newCommentName")
+        nameForm.classList.add("new-comment__error")
+        return;
+    } else if (event.target.comment.value === "") {
+        const commentForm = document.getElementById("newCommentBody")
+        commentForm.classList.add("new-comment__error")
+        return;
+    } else {
 
-    const newComment = {
-        name: event.target.name.value,
-        comment: event.target.comment.value
+        const newComment = {
+            name: event.target.name.value,
+            comment: event.target.comment.value
+        }
+        axios
+            .post(commentURL, newComment)
+            .then(response => {
+                const commentArray = response.data
+
+                addComments(commentArray, commentContainer)
+                getComments()
+            })
+
+        nameForm.value = ""
+        nameForm.classList.remove("new-comment__error")
+        const commentForm = document.getElementById("newCommentBody")
+        commentForm.value = ""
+        commentForm.classList.remove("new-comment__error")
     }
-    axios
-    .post(commentURL, newComment)
-    .then(response => {
-        console.log(response)
-        const commentArray = response.data
-
-        addComments(commentArray, commentContainer)
-        getComments()
-    })
-
-    nameForm.value = ""
-    nameForm.classList.remove("new-comment__error")
-    const commentForm = document.getElementById("newCommentBody")
-    commentForm.value = ""
-    commentForm.classList.remove("new-comment__error")
-}})
+})
 

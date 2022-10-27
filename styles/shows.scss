@@ -81,6 +81,7 @@
             display: flex;
             flex-direction: row;
             margin: 0;
+            justify-content: space-between;
         }
         &:hover{
             background-color: $alabaster;
@@ -117,6 +118,7 @@
         font-weight: 600;
         @include tablet{
             @include dt-body;
+            font-weight: 700;
         }
     }
 
