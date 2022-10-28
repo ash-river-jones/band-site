@@ -1,123 +1,119 @@
-
-var apiKey = "?api_key=a3a286f3-5e28-43cf-b547-6ac20705ab03z"
+var apiKey = "?api_key=a3a286f3-5e28-43cf-b547-6ac20705ab03z";
 
 const addShow = function (showsArray, showContainer) {
+  showContainer.innerText = "";
 
-    showContainer.innerText = ""
+  for (let i = 0; i < showsArray.length; i++) {
+    // Show container element creation
 
-    for (let i = 0; i < showsArray.length; i++) {
+    const show = document.createElement("div");
+    show.classList.add("show");
 
-        // Show container element creation
+    const showWrapper = document.createElement("section");
+    showWrapper.classList.add("show__wrapper");
 
-        const show = document.createElement("div")
-        show.classList.add("show")
+    show.appendChild(showWrapper);
 
-        const showWrapper = document.createElement("section")
-        showWrapper.classList.add("show__wrapper")
+    // Date creation
 
-        show.appendChild(showWrapper)
+    const showInfoDate = document.createElement("div");
+    showInfoDate.classList.add("show__info");
 
-        // Date creation
+    const showInfoHeadingDate = document.createElement("div");
+    showInfoHeadingDate.classList.add("show__info-heading");
+    showInfoHeadingDate.innerText = "DATE";
 
-        const showInfoDate = document.createElement("div")
-        showInfoDate.classList.add("show__info")
+    const showDate = document.createElement("div");
+    showDate.classList.add("show__date");
 
-        const showInfoHeadingDate = document.createElement("div")
-        showInfoHeadingDate.classList.add("show__info-heading")
-        showInfoHeadingDate.innerText = ("DATE")
+    const dateFormat = new Date(showsArray[i].date);
+    const formattedDate = dateFormat.toDateString();
+    showDate.innerText = formattedDate;
 
-        const showDate = document.createElement("div")
-        showDate.classList.add("show__date")
+    showInfoDate.appendChild(showInfoHeadingDate);
+    showInfoDate.appendChild(showDate);
 
-        const dateFormat = new Date(showsArray[i].date)
-        const formattedDate = dateFormat.toDateString()
-        showDate.innerText = formattedDate
+    // Venue creation
 
-        showInfoDate.appendChild(showInfoHeadingDate)
-        showInfoDate.appendChild(showDate)
+    const showInfoVenue = document.createElement("div");
+    showInfoVenue.classList.add("show__info");
 
-        // Venue creation
+    const showInfoHeadingVenue = document.createElement("div");
+    showInfoHeadingVenue.classList.add("show__info-heading");
+    showInfoHeadingVenue.innerText = "VENUE";
 
-        const showInfoVenue = document.createElement("div")
-        showInfoVenue.classList.add("show__info")
+    const showVenue = document.createElement("div");
+    showVenue.classList.add("show__venue");
+    showVenue.innerText = showsArray[i].place;
 
-        const showInfoHeadingVenue = document.createElement("div")
-        showInfoHeadingVenue.classList.add("show__info-heading")
-        showInfoHeadingVenue.innerText = ("VENUE")
+    showInfoVenue.appendChild(showInfoHeadingVenue);
+    showInfoVenue.appendChild(showVenue);
 
-        const showVenue = document.createElement("div")
-        showVenue.classList.add("show__venue")
-        showVenue.innerText = showsArray[i].place
+    // Location creation
 
-        showInfoVenue.appendChild(showInfoHeadingVenue)
-        showInfoVenue.appendChild(showVenue)
+    const showInfoLocation = document.createElement("div");
+    showInfoLocation.classList.add("show__info");
 
-        // Location creation
+    const showInfoHeadingLocation = document.createElement("div");
+    showInfoHeadingLocation.classList.add("show__info-heading");
+    showInfoHeadingLocation.innerText = "LOCATION";
 
-        const showInfoLocation = document.createElement("div")
-        showInfoLocation.classList.add("show__info")
+    const showLocation = document.createElement("div");
+    showLocation.classList.add("show__location");
+    showLocation.innerText = showsArray[i].location;
 
-        const showInfoHeadingLocation = document.createElement("div")
-        showInfoHeadingLocation.classList.add("show__info-heading")
-        showInfoHeadingLocation.innerText = ("LOCATION")
+    showInfoLocation.appendChild(showInfoHeadingLocation);
+    showInfoLocation.appendChild(showLocation);
 
-        const showLocation = document.createElement("div")
-        showLocation.classList.add("show__location")
-        showLocation.innerText = showsArray[i].location
+    // Button creation
 
-        showInfoLocation.appendChild(showInfoHeadingLocation)
-        showInfoLocation.appendChild(showLocation)
+    const showBtnSection = document.createElement("div");
+    showBtnSection.classList.add("show__btn-section");
 
-        // Button creation 
+    const showBtn = document.createElement("a");
+    showBtn.classList.add("show__btn");
+    showBtn.innerText = "BUY TICKETS";
 
-        const showBtnSection = document.createElement("div")
-        showBtnSection.classList.add("show__btn-section")
+    showBtnSection.appendChild(showBtn);
 
-        const showBtn = document.createElement("a")
-        showBtn.classList.add("show__btn")
-        showBtn.innerText = ("BUY TICKETS")
+    // Appending show details to individual show
 
-        showBtnSection.appendChild(showBtn)
+    showWrapper.appendChild(showInfoDate);
+    showWrapper.appendChild(showInfoVenue);
+    showWrapper.appendChild(showInfoLocation);
+    showWrapper.appendChild(showBtnSection);
 
-        // Appending show details to individual show 
+    // Injecting show into html
 
-        showWrapper.appendChild(showInfoDate)
-        showWrapper.appendChild(showInfoVenue)
-        showWrapper.appendChild(showInfoLocation)
-        showWrapper.appendChild(showBtnSection)
+    showContainer.appendChild(showWrapper);
+  }
+};
 
-        // Injecting show into html 
+const showsWrapper = document.querySelector(".show__container");
 
-        showContainer.appendChild(showWrapper)
-    }
-}
-
-const showsWrapper = document.querySelector(".show__container")
-
-const showsURL = "https://project-1-api.herokuapp.com/showdates" + apiKey
-axios.get(showsURL).then(response => {
-    const showsArray = response.data
-    console.log(showsArray)
-    addShow(showsArray, showsWrapper)
-})
+const showsURL = "https://project-1-api.herokuapp.com/showdates" + apiKey;
+axios.get(showsURL).then((response) => {
+  const showsArray = response.data;
+  console.log(showsArray);
+  addShow(showsArray, showsWrapper);
+});
 
 // Active show row background
 
-let prevShow = null
+let prevShow = null;
 
-const wrapper = document.querySelector(".show__container")
+const wrapper = document.querySelector(".show__container");
 
 wrapper.addEventListener("click", function (event) {
+  const isShow = event.currentTarget.nodeName === "SECTION";
 
-    const isShow = event.currentTarget.nodeName === 'SECTION'
+  if (!isShow) {
+    return;
+  }
+  event.target.classList.add("active");
 
-    if (!isShow) {
-        return;
-    }
-    event.target.classList.add("active")
-    
-    if (prevShow !== null) {
-        prevShow.classList.remove("active")
-    }
-    prevShow = event.target
-})
+  if (prevShow !== null) {
+    prevShow.classList.remove("active");
+  }
+  prevShow = event.target;
+});

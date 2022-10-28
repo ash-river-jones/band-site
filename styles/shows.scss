@@ -1,161 +1,157 @@
-@use './partials/mixins' as *;
-@use './partials/variables' as *;
-@use './partials/typography' as *;
-@use './partials/global' as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+@use "./partials/typography" as *;
+@use "./partials/global" as *;
 
+.shows {
+  margin: 0 0;
+  @include tablet {
+    margin: 2.25rem 2.25rem 1rem 2.25rem;
+  }
+  @include desktop {
+    margin: 2.25rem auto 1rem auto;
+  }
 
+  &__wrapper {
+    @include desktop {
+      max-width: 80rem;
+      display: flex;
+      justify-content: center;
+      margin-inline: auto;
+    }
+  }
 
-.shows{
-    margin: 0 0;
+  &__heading {
+    margin: 2.25rem 1rem 2rem 1rem;
     @include tablet {
-        margin: 2.25rem 2.25rem 1rem 2.25rem;
+      margin: 3rem 0rem 0rem 0rem;
     }
     @include desktop {
-        margin: 2.25rem auto 1rem auto;
+      margin-right: 16rem;
     }
+  }
 
-    &__wrapper{
-        @include desktop{
-            max-width: 80rem;
-            display: flex;
-            justify-content: center;
-            margin-inline: auto;
-        }
-    }
-
-    &__heading{
-        margin: 2.25rem 1rem 2rem 1rem;
-        @include tablet{
-            margin: 3rem 0rem 0rem 0rem;
-        }   
-        @include desktop {
-            margin-right: 16rem;
-        }
-    }
-
-    &__header{
-        @include m-section-header;
-        font-weight: 700;
-        color: $bandsite-darkblack;
-        margin-left: 0.5rem;
-        @include tablet {
-            @include dt-section-header;
-            font-weight: 600;
-        }
-    }
-}
-
-.active{
-    background-color: $mercury;
-}
-
-.tablet-show-info-heading{
-    display: none;
+  &__header {
+    @include m-section-header;
+    font-weight: 700;
+    color: $bandsite-darkblack;
+    margin-left: 0.5rem;
     @include tablet {
-        margin-top: 2.25rem;
-        display: flex;
+      @include dt-section-header;
+      font-weight: 600;
     }
-
-    &__section{
-        
-        @include tablet{    
-            @include dt-label-button;
-            color: $silver;
-            font-weight: 600;
-            margin: 0 9rem 0 0.5rem;
-        }
-        @include desktop {
-            margin: 0 12.875rem 0 0.5rem;
-        }
-    }
+  }
 }
 
-.show{
+.active {
+  background-color: $mercury;
+}
 
-    &__wrapper{
-        margin: 1rem 0;
-        border-bottom: 1px solid $mercury;
-        z-index: 100;
-        @include tablet {
-            display: flex;
-            flex-direction: row;
-            margin: 0;
-            justify-content: space-between;
-        }
-        &:hover{
-            background-color: $alabaster;
-        }
-    }
+.tablet-show-info-heading {
+  display: none;
+  @include tablet {
+    margin-top: 2.25rem;
+    display: flex;
+  }
 
-    &__info{
-        margin: 1rem 1rem 0 1rem;
-        @include tablet {
-            justify-self: flex-start;
-            margin: 1rem 0 0 .625rem;
-            width: 10.875rem;
-        }
-        @include desktop{
-            width: 14.9375rem;
-        }
+  &__section {
+    @include tablet {
+      @include dt-label-button;
+      color: $silver;
+      font-weight: 600;
+      margin: 0 9rem 0 0.5rem;
     }
+    @include desktop {
+      margin: 0 12.875rem 0 0.5rem;
+    }
+  }
+}
 
-    &__info-heading{
-        @include m-label-button;
-        color: $silver;
-        font-weight: 600;
-        @include tablet {
-            display: none;
-            @include dt-label-button;
-        }
+.show {
+  &__wrapper {
+    margin: 1rem 0;
+    border-bottom: 1px solid $mercury;
+    z-index: 100;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      justify-content: space-between;
     }
+    &:hover {
+      background-color: $alabaster;
+    }
+  }
 
-    &__date{
-        @include m-body;
-        color: $bandsite-black;
-        font-weight: 600;
-        @include tablet{
-            @include dt-body;
-            font-weight: 700;
-        }
+  &__info {
+    margin: 1rem 1rem 0 1rem;
+    @include tablet {
+      justify-self: flex-start;
+      margin: 1rem 0 0 0.625rem;
+      width: 10.875rem;
     }
+    @include desktop {
+      width: 14.9375rem;
+    }
+  }
 
-    &__venue{
-        @include m-body;
-        color: $bandsite-black;
-        @include tablet{
-            @include dt-body;
-        }
+  &__info-heading {
+    @include m-label-button;
+    color: $silver;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+      @include dt-label-button;
     }
+  }
 
-    &__location{
-        @include m-body;
-        color: $bandsite-black;
-        @include tablet{
-            @include dt-body;
-        }
+  &__date {
+    @include m-body;
+    color: $bandsite-black;
+    font-weight: 600;
+    @include tablet {
+      @include dt-body;
+      font-weight: 700;
     }
+  }
 
-    &__btn-section{
-        background-color: $bandsite-black;
-        border-radius: .25rem;
-        margin: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include tablet {
-            justify-self: flex-end;
-            margin: 1rem 1rem 1rem 0;
-        }
+  &__venue {
+    @include m-body;
+    color: $bandsite-black;
+    @include tablet {
+      @include dt-body;
     }
+  }
 
-    &__btn{
-        @include m-subheader;
-        width: inherit;
-        text-align: center;
-        margin: .5rem auto;
-        color: $white;
-        @include tablet {
-            padding: 0rem 1.75rem;
-        }
+  &__location {
+    @include m-body;
+    color: $bandsite-black;
+    @include tablet {
+      @include dt-body;
     }
+  }
+
+  &__btn-section {
+    background-color: $bandsite-black;
+    border-radius: 0.25rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      justify-self: flex-end;
+      margin: 1rem 1rem 1rem 0;
+    }
+  }
+
+  &__btn {
+    @include m-subheader;
+    width: inherit;
+    text-align: center;
+    margin: 0.5rem auto;
+    color: $white;
+    @include tablet {
+      padding: 0rem 1.25rem;
+    }
+  }
 }

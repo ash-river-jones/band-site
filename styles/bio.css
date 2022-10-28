@@ -776,6 +776,7 @@
   margin: 1rem 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .comments-section {
@@ -837,7 +838,12 @@
 }
 .comments-section__top-right {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.25rem;
+}
+@media (min-width: 768px) {
+  .comments-section__top-right {
+    gap: 0.75rem;
+  }
 }
 .comments-section__top-right--date {
   font-size: 0.8125rem;
@@ -847,6 +853,27 @@
 }
 @media (min-width: 768px) {
   .comments-section__top-right--date {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+.comments-section__top-right--delete-icon {
+  height: 75%;
+  width: 75%;
+}
+.comments-section__top-right--like-icon {
+  height: 75%;
+  width: 75%;
+}
+.comments-section__top-right--like-icon-count {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #323232;
+}
+@media (min-width: 768px) {
+  .comments-section__top-right--like-icon-count {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;

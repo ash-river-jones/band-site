@@ -1,332 +1,330 @@
-@use './mixins' as *;
-@use './variables' as *;
-@use './typography' as *;
+@use "./mixins" as *;
+@use "./variables" as *;
+@use "./typography" as *;
 
 * {
-    font-family: Avenir;
-    font-weight: 400;
-    box-sizing:border-box;
-    padding: 0;
-    margin: 0;   
+  font-family: Avenir;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.header{
-    background-color: $bandsite-black;
+.header {
+  background-color: $bandsite-black;
+  width: 100%;
+  position: fixed;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      flex-direction: row;
+      width: 80rem;
+      margin-inline: auto;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    margin-top: 1rem;
+    @include tablet {
+      margin: 1rem 2rem;
+    }
+  }
+
+  &__logo-img {
+    margin: 0;
+  }
+
+  &__nav {
     width: 100%;
-    position: fixed;
+    @include tablet {
+      width: auto;
+      margin: 0 1.5rem;
+      height: 71px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    justify-content: space-around;
+    margin: 0;
 
     @include tablet {
-        flex-direction: row;
+      height: 4.4375rem;
+    }
+  }
+
+  &__nav-item {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      margin: 1.25rem 1rem 0rem 1rem;
+    }
+  }
+
+  &__nav-link {
+    height: 2.4375rem;
+    width: 8.125rem;
+    text-decoration: none;
+    color: $mercury;
+    @include m-body;
+    font-weight: 400;
+
+    &:hover {
+      color: $white;
     }
 
-    &__wrapper{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include tablet{
-            flex-direction: row;
-        }
-        @include desktop{
-            flex-direction: row;
-            width: 80rem;
-            margin-inline: auto;
-        }
+    @include tablet {
+      @include dt-body;
     }
+  }
 
-    &__logo {
-        display: flex;
-        margin-top: 1rem;
-        @include tablet{
-        margin: 1rem 2rem;
-        }
+  &__nav-item--active {
+    color: $white;
+    border-bottom: 3px solid $white;
+    font-weight: 700;
+  }
+
+  &__nav-item--inactive {
+    font-weight: 400;
+
+    &:hover {
+      color: $white;
+      border-bottom: 3px solid $white;
+      font-weight: 700;
     }
-
-    &__logo-img{
-        margin: 0;
-    }
-
-    &__nav{
-        width: 100%;
-        @include tablet{
-            width: auto;
-            margin: 0 1.5rem;
-            height: 71px;
-        }
-    }
-
-    &__nav-list{
-        display: flex;
-        list-style: none;
-        margin: 0;
-        justify-content: space-around;
-        margin: 0;
-
-        @include tablet{
-            height: 4.4375rem;
-        }
-    }
-
-    &__nav-item{
-        width: 100%;
-        text-align: center;
-        padding-bottom: 1rem;
-
-        @include tablet{
-            margin: 1.25rem 1rem 0rem 1rem;
-
-        }
-    }
-
-    &__nav-link{
-        height: 2.4375rem;
-        width: 8.125rem;
-        text-decoration: none;
-        color: $mercury;
-        @include m-body;
-        font-weight: 400;
-
-        &:hover{
-            color: $white;
-        }
-
-        @include tablet{
-            @include dt-body;
-        }
-    }
-
-    &__nav-item--active{
-        color: $white;
-        border-bottom: 3px solid $white;
-        font-weight: 700;
-    }
-
-    &__nav-item--inactive{
-        font-weight: 400;
-            
-        &:hover{
-            color: $white;
-            border-bottom: 3px solid $white;
-            font-weight: 700;
-        }
-    }
+  }
 }
 
-.blank-space{
-    height: 4.875rem;
+.blank-space {
+  height: 4.875rem;
 
-    @include tablet{
-        height: 4.4375rem;
-    }
+  @include tablet {
+    height: 4.4375rem;
+  }
 }
 
-.hero-banner{
-    background-image: url(../../assets/Images/hero-bio.jpg);
-    background-position: center;
-    background-size: cover;
+.hero-banner {
+  background-image: url(../../assets/Images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
 
-    &--shows{
-        background-image: url(../../assets/Images/hero-shows.jpg);
+  &--shows {
+    background-image: url(../../assets/Images/hero-shows.jpg);
+  }
+
+  &__wrapper {
+    display: flex;
+    min-height: 45vh;
+    width: auto;
+    height: 30vw;
+    @include tablet {
+      height: 30.5rem;
     }
+  }
 
-    &__wrapper{
-        display: flex;
-        min-height: 45vh;
-        width: auto;
-        height: 30vw;
-        @include tablet{
-            height: 30.5rem;
-
-        }
+  &__background {
+    background-color: rgba($color: #323232, $alpha: 0.5);
+    width: 100vw;
+    display: inline-flex;
+    align-items: center;
+    @include tablet {
+      height: 30.5rem;
     }
+  }
 
-    &__background{
-        background-color: rgba($color: #323232, $alpha: 0.5);
-        width: 100vw;
-        display: inline-flex;        
-        align-items: center;
-        @include tablet{
-            height: 30.5rem;
-        }
+  &__title-section {
+    margin: 1rem;
+
+    @include tablet {
+      margin: 2.25rem;
     }
-
-    &__title-section{
-        margin: 1rem;
-    
-        @include tablet{
-            margin: 2.25rem;
-        }
-        @include desktop{
-            width: 80rem;
-            margin-inline: auto;
-            display: flex;
-            justify-content: space-between;
-        }
+    @include desktop {
+      width: 80rem;
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
     }
+  }
 
-    &__title-heading{
-        @include desktop{
-            margin-left: 5rem;
-        }
+  &__title-heading {
+    @include desktop {
+      margin-left: 5rem;
     }
+  }
 
-    &__subheader{
-        @include m-subheader;
-        color: $white;
-        font-weight: 400;
-        margin-bottom: 1rem;
-        @include tablet {
-            @include dt-subheader;
-        }
+  &__subheader {
+    @include m-subheader;
+    color: $white;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    @include tablet {
+      @include dt-subheader;
     }
+  }
 
-    &__title{
-        color: $white;
-        margin: 0;
-        @include m-page-header;
+  &__title {
+    color: $white;
+    margin: 0;
+    @include m-page-header;
 
-        @include tablet{
-            @include dt-page-header;
-            font-weight: 600;
-            width: 80%;
-        }
-        @include desktop {
-            width: 65%;
-            margin-left: 4.5rem;
-        }
+    @include tablet {
+      @include dt-page-header;
+      font-weight: 600;
+      width: 80%;
     }
-
-    &__soundcloud{
-        max-height: 15vh;
-        margin-top: 1rem;
-
-        @include tablet {
-            width: 50vw;
-            margin-top: 2.25rem;
-        }
-        @include desktop{
-            width: 35vw;
-            margin-right: 5rem;
-        }
+    @include desktop {
+      width: 65%;
+      margin-left: 4.5rem;
     }
+  }
+
+  &__soundcloud {
+    max-height: 15vh;
+    margin-top: 1rem;
+
+    @include tablet {
+      width: 50vw;
+      margin-top: 2.25rem;
+    }
+    @include desktop {
+      width: 35vw;
+      margin-right: 5rem;
+    }
+  }
 }
 
-.footer{
-    background-color: $bandsite-black;
-    padding: 1.5rem 1rem;
+.footer {
+  background-color: $bandsite-black;
+  padding: 1.5rem 1rem;
 
-    &__wrapper{
-        @include desktop{
-            width: 77rem;
-            margin-inline: auto;
-        }
+  &__wrapper {
+    @include desktop {
+      width: 77rem;
+      margin-inline: auto;
     }
+  }
 
-    &__header{
-        @include tablet {
-            margin: 2.25rem;
-            display: flex;
-        }
+  &__header {
+    @include tablet {
+      margin: 2.25rem;
+      display: flex;
     }
+  }
 
-    &__heading{
-        color: $white;
-        @include m-section-header;
-        @include tablet{
-            @include dt-section-header;
-            margin-right: 1rem;
-        }
-        @include desktop{
-            margin-right: 3.0913rem;
-        }
+  &__heading {
+    color: $white;
+    @include m-section-header;
+    @include tablet {
+      @include dt-section-header;
+      margin-right: 1rem;
     }
+    @include desktop {
+      margin-right: 3.0913rem;
+    }
+  }
 
-    &__social-icon-list{
-        margin: 1rem 0;
-        display: flex;
-        width: 40%;
-        justify-content: space-between;
-        @include tablet {
-            display: flex;
-            gap: 1.125rem;
-            width: auto;
-            max-width: 28%;
-            justify-content: normal;
-        }
-        @include desktop {
-            gap: 2.25rem;
-        }
+  &__social-icon-list {
+    margin: 1rem 0;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    @include tablet {
+      display: flex;
+      gap: 1.125rem;
+      width: auto;
+      max-width: 28%;
+      justify-content: normal;
     }
+    @include desktop {
+      gap: 2.25rem;
+    }
+  }
 
-    &__logo-section{
-        margin-left: auto;
-    }
+  &__logo-section {
+    margin-left: auto;
+  }
 
-    &__logo{
-        display:none;
-        @include tablet{
-            display: block;
-            margin-left: auto;
-        }
+  &__logo {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-left: auto;
     }
+  }
 
-    &__contact{
-        @include tablet{
-            margin: 0 2.25rem;
-            display: flex;
-        }
+  &__contact {
+    @include tablet {
+      margin: 0 2.25rem;
+      display: flex;
     }
+  }
 
-    &__contact-info{
-        margin: 1rem 0;
-        @include tablet{
-            margin: 0 2.3487rem 0 0 ;
-        }
-        @include desktop{
-            margin-right: 4.5rem;
-        }
+  &__contact-info {
+    margin: 1rem 0;
+    @include tablet {
+      margin: 0 2.3487rem 0 0;
     }
+    @include desktop {
+      margin-right: 4.5rem;
+    }
+  }
 
-    &__contact-details{
-        color: $white;
-        @include m-footer;
-        margin: .5rem 0 ;
-        @include tablet{
-            @include dt-footer;
-            margin: .5rem 0;
-        }
+  &__contact-details {
+    color: $white;
+    @include m-footer;
+    margin: 0.5rem 0;
+    @include tablet {
+      @include dt-footer;
+      margin: 0.5rem 0;
     }
+  }
 
-    &__contact-details--name{
-        font-weight: 600;
-        margin: 0;
-    }
+  &__contact-details--name {
+    font-weight: 600;
+    margin: 0;
+  }
 
-    &__contact-details--link{
-        text-decoration: none;
-    }
+  &__contact-details--link {
+    text-decoration: none;
+  }
 }
 
-.copy{
-    @include tablet{
-        margin-left: 2.25rem;
-    }
+.copy {
+  @include tablet {
+    margin-left: 2.25rem;
+  }
 
-    &__logo-section{
-        margin-top: 3rem;
-    }
+  &__logo-section {
+    margin-top: 3rem;
+  }
 
-    &__logo{
-        color: $white;
-        @include tablet{
-            display: none;
-        }
+  &__logo {
+    color: $white;
+    @include tablet {
+      display: none;
     }
+  }
 
-    &__message{
-        color: $white;
-        @include m-footer;
-        @include tablet{
-            @include dt-footer;
-        }
+  &__message {
+    color: $white;
+    @include m-footer;
+    @include tablet {
+      @include dt-footer;
     }
+  }
 }
