@@ -96,14 +96,14 @@
   height: 2.4375rem;
   width: 8.125rem;
   text-decoration: none;
-  color: #E1E1E1;
+  color: #e1e1e1;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   font-weight: 400;
 }
 .header__nav-link:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .header__nav-link {
@@ -113,16 +113,16 @@
   }
 }
 .header__nav-item--active {
-  color: #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
   font-weight: 700;
 }
 .header__nav-item--inactive {
   font-weight: 400;
 }
 .header__nav-item--inactive:hover {
-  color: #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
   font-weight: 700;
 }
 
@@ -190,7 +190,7 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 400;
   margin-bottom: 1rem;
 }
@@ -202,7 +202,7 @@
   }
 }
 .hero-banner__title {
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -257,7 +257,7 @@
   }
 }
 .footer__heading {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -327,7 +327,7 @@
   }
 }
 .footer__contact-details {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -358,7 +358,7 @@
   margin-top: 3rem;
 }
 .copy__logo {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .copy__logo {
@@ -366,7 +366,7 @@
   }
 }
 .copy__message {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -380,7 +380,7 @@
 }
 
 .about {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 1rem;
 }
 @media (min-width: 768px) {
@@ -497,7 +497,7 @@
 }
 
 .gallery {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   margin: 1rem 0;
 }
 @media (min-width: 768px) {
@@ -632,7 +632,7 @@
   }
 }
 .new-comment__icon-section {
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 .new-comment__icon {
   background-position: center;
@@ -645,7 +645,7 @@
   margin: 1.375rem 1rem 0 0;
 }
 .new-comment__form-wrapper {
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 @media (min-width: 768px) {
   .new-comment__form-wrapper {
@@ -656,7 +656,7 @@
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: 700;
-  color: #AFAFAF;
+  color: #afafaf;
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
@@ -674,8 +674,8 @@
 }
 .new-comment__name-form {
   width: 14.75rem;
-  background-color: #FAFAFA;
-  border: 1px solid #E1E1E1;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
   border-radius: 0.25rem;
   height: 2.25rem;
   margin-bottom: 1rem;
@@ -702,13 +702,13 @@
   }
 }
 .new-comment__error {
-  border: 1px solid #D22D2D;
+  border: 1px solid #d22d2d;
 }
 .new-comment__comment-form {
   width: 14.75rem;
   min-height: 6rem;
-  background-color: #FAFAFA;
-  border: 0.0625rem solid #E1E1E1;
+  background-color: #fafafa;
+  border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
   height: 2.25rem;
   padding: 0.75rem;
@@ -735,7 +735,7 @@
   }
 }
 .new-comment__error {
-  border: 1px solid #D22D2D;
+  border: 1px solid #d22d2d;
 }
 .new-comment__btn-section {
   background-color: #323232;
@@ -746,7 +746,7 @@
   align-items: center;
   width: 14.75rem;
   height: 2.5rem;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -799,10 +799,10 @@
   margin-top: 1rem;
 }
 .comments-section__icon-section {
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 .comments-section__icon {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 2rem;
@@ -810,7 +810,7 @@
 }
 .comments-section__comment-section {
   width: 14.75rem;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 @media (min-width: 768px) {
   .comments-section__comment-section {
@@ -849,7 +849,7 @@
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 @media (min-width: 768px) {
   .comments-section__top-right--date {

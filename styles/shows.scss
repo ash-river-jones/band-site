@@ -43,10 +43,6 @@
   }
 }
 
-.active {
-  background-color: $mercury;
-}
-
 .tablet-show-info-heading {
   display: none;
   @include tablet {
@@ -77,6 +73,9 @@
       flex-direction: row;
       margin: 0;
       justify-content: space-between;
+    }
+    &--active{
+      background-color: $mercury;
     }
     &:hover {
       background-color: $alabaster;

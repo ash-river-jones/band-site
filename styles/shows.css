@@ -96,14 +96,14 @@
   height: 2.4375rem;
   width: 8.125rem;
   text-decoration: none;
-  color: #E1E1E1;
+  color: #e1e1e1;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   font-weight: 400;
 }
 .header__nav-link:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .header__nav-link {
@@ -113,16 +113,16 @@
   }
 }
 .header__nav-item--active {
-  color: #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
   font-weight: 700;
 }
 .header__nav-item--inactive {
   font-weight: 400;
 }
 .header__nav-item--inactive:hover {
-  color: #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
   font-weight: 700;
 }
 
@@ -190,7 +190,7 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 400;
   margin-bottom: 1rem;
 }
@@ -202,7 +202,7 @@
   }
 }
 .hero-banner__title {
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -257,7 +257,7 @@
   }
 }
 .footer__heading {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -327,7 +327,7 @@
   }
 }
 .footer__contact-details {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -358,7 +358,7 @@
   margin-top: 3rem;
 }
 .copy__logo {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .copy__logo {
@@ -366,7 +366,7 @@
   }
 }
 .copy__message {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -430,10 +430,6 @@
   }
 }
 
-.active {
-  background-color: #E1E1E1;
-}
-
 .tablet-show-info-heading {
   display: none;
 }
@@ -448,7 +444,7 @@
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-weight: 700;
-    color: #AFAFAF;
+    color: #afafaf;
     font-weight: 600;
     margin: 0 9rem 0 0.5rem;
   }
@@ -461,7 +457,7 @@
 
 .show__wrapper {
   margin: 1rem 0;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
   z-index: 100;
 }
 @media (min-width: 768px) {
@@ -472,8 +468,11 @@
     justify-content: space-between;
   }
 }
+.show__wrapper--active {
+  background-color: #e1e1e1;
+}
 .show__wrapper:hover {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 .show__info {
   margin: 1rem 1rem 0 1rem;
@@ -494,7 +493,7 @@
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: 700;
-  color: #AFAFAF;
+  color: #afafaf;
   font-weight: 600;
 }
 @media (min-width: 768px) {
@@ -567,7 +566,7 @@
   width: inherit;
   text-align: center;
   margin: 0.5rem auto;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .show__btn {

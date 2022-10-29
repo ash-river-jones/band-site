@@ -86,34 +86,25 @@ const addShow = function (showsArray, showContainer) {
     // Injecting show into html
 
     showContainer.appendChild(showWrapper);
+
+    showWrapper.addEventListener("click", (event) => {
+      const selectedShow = document.querySelector(".show__wrapper--active");
+      if (selectedShow) {
+        selectedShow.classList.remove("show__wrapper--active");
+      }
+      event.currentTarget.classList.add("show__wrapper--active");
+    });
   }
 };
 
+const showsURL = "https://project-1-api.herokuapp.com/showdates" + apiKey;
 const showsWrapper = document.querySelector(".show__container");
 
-const showsURL = "https://project-1-api.herokuapp.com/showdates" + apiKey;
-axios.get(showsURL).then((response) => {
-  const showsArray = response.data;
-  console.log(showsArray);
-  addShow(showsArray, showsWrapper);
-});
+function getShows() {
+  axios.get(showsURL).then((response) => {
+    const showsArray = response.data;
+    addShow(showsArray, showsWrapper);
+  });
+}
 
-// Active show row background
-
-let prevShow = null;
-
-const wrapper = document.querySelector(".show__container");
-
-wrapper.addEventListener("click", function (event) {
-  const isShow = event.currentTarget.nodeName === "SECTION";
-
-  if (!isShow) {
-    return;
-  }
-  event.target.classList.add("active");
-
-  if (prevShow !== null) {
-    prevShow.classList.remove("active");
-  }
-  prevShow = event.target;
-});
+getShows();
