@@ -106,9 +106,10 @@ function getShows() {
     .then((response) => {
       const showsArray = response.data;
       addShow(showsArray, showsWrapper);
-    }).catch(function (error) {
-      console.log(error)
     })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 
 getShows();

@@ -50,11 +50,14 @@ const addComments = function (comments, commentContainer) {
     const commentDeleteURL =
       "https://project-1-api.herokuapp.com/comments/" + commentID + apiKey;
     topRightDelete.addEventListener("click", () => {
-      axios.delete(commentDeleteURL).then(() => {
-        getComments();
-      }).catch (function (error) {
-        console.log(error)
-      })
+      axios
+        .delete(commentDeleteURL)
+        .then(() => {
+          getComments();
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     });
 
     const topRightLike = document.createElement("img");
@@ -75,11 +78,14 @@ const addComments = function (comments, commentContainer) {
       apiKey;
 
     topRightLike.addEventListener("click", () => {
-      axios.put(commentLikeURL).then(() => {
-        getComments();
-      }).catch (function (error) {
-        console.log(error)
-      })
+      axios
+        .put(commentLikeURL)
+        .then(() => {
+          getComments();
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     });
 
     topRight.appendChild(topRightLike);
@@ -113,14 +119,18 @@ const commentContainer = document.querySelector(".comments-section__container");
 const commentURL = "https://project-1-api.herokuapp.com/comments" + apiKey;
 
 function getComments() {
-  axios.get(commentURL).then((response) => {
-    const commentArray = response.data;
-    const sortedCommentArray = commentArray.sort(
-      (a, b) => b.timestamp - a.timestamp);
-    addComments(sortedCommentArray, commentContainer);
-  }).catch (function (error) {
-    console.log(error)
-  })
+  axios
+    .get(commentURL)
+    .then((response) => {
+      const commentArray = response.data;
+      const sortedCommentArray = commentArray.sort(
+        (a, b) => b.timestamp - a.timestamp
+      );
+      addComments(sortedCommentArray, commentContainer);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 
 getComments();
@@ -151,13 +161,16 @@ commentForm.addEventListener("submit", function (event) {
       name: event.target.name.value,
       comment: event.target.comment.value,
     };
-    axios.post(commentURL, newComment).then((response) => {
-      const commentArray = response.data;
-      addComments(commentArray, commentContainer);
-      getComments();
-    }).catch (function (error) {
-      console.log(error)
-    })
+    axios
+      .post(commentURL, newComment)
+      .then((response) => {
+        const commentArray = response.data;
+        addComments(commentArray, commentContainer);
+        getComments();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
     nameForm.value = "";
     nameForm.classList.remove("new-comment__error");
@@ -167,26 +180,26 @@ commentForm.addEventListener("submit", function (event) {
   }
 });
 
-function relativeTime(timestamp){
-  const oneYear = 1000 * 60 * 60 * 24 * 365.25
-  const oneMonth = 1000 * 60 * 60 * 24 * (365.25/12)
-  const oneDay = 1000 * 60 * 60 * 24
-  const oneHour = 1000 * 60 * 60
-  const oneMinute = 1000 * 60
+function relativeTime(timestamp) {
+  const oneYear = 1000 * 60 * 60 * 24 * 365.25;
+  const oneMonth = 1000 * 60 * 60 * 24 * (365.25 / 12);
+  const oneDay = 1000 * 60 * 60 * 24;
+  const oneHour = 1000 * 60 * 60;
+  const oneMinute = 1000 * 60;
 
-  const timeSince = new Date().getTime() - timestamp
+  const timeSince = new Date().getTime() - timestamp;
 
   if (timeSince <= oneMinute) {
-    return "Just now"
+    return "Just now";
   } else if (timeSince < oneHour) {
-    return Math.round(timeSince/oneMinute) + " minutes ago"
+    return Math.round(timeSince / oneMinute) + " minutes ago";
   } else if (timeSince < oneDay) {
-    return Math.round(timestamp/oneHour) + " hours ago"
+    return Math.round(timestamp / oneHour) + " hours ago";
   } else if (timeSince < oneMonth) {
-    return Math.round(timeSince/oneDay) + " days ago"
+    return Math.round(timeSince / oneDay) + " days ago";
   } else if (timeSince < oneYear) {
-    return Math.round(timestamp/oneMonth) + " months ago"
+    return Math.round(timestamp / oneMonth) + " months ago";
   } else {
-    return Math.round(timeSince/oneYear) + " years ago"
+    return Math.round(timeSince / oneYear) + " years ago";
   }
 }
