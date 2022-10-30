@@ -37,9 +37,9 @@ const addComments = function (comments, commentContainer) {
 
     const topRightDate = document.createElement("div");
     topRightDate.classList.add("comments-section__top-right--date");
-    const dateFormat = new Date(comments[i].timestamp);
-    const formattedDate = dateFormat.toLocaleDateString("en-us");
-    topRightDate.innerText = formattedDate;
+    // const dateFormat = new Date(comments[i].timestamp);
+    // const formattedDate = dateFormat.toLocaleDateString("en-us");
+    topRightDate.innerText = relativeTime(comments[i].timestamp);
 
     const topRightDelete = document.createElement("img");
     topRightDelete.classList.add("comments-section__top-right--delete-icon");
@@ -52,7 +52,9 @@ const addComments = function (comments, commentContainer) {
     topRightDelete.addEventListener("click", () => {
       axios.delete(commentDeleteURL).then(() => {
         getComments();
-      });
+      }).catch (function (error) {
+        console.log(error)
+      })
     });
 
     const topRightLike = document.createElement("img");
@@ -75,7 +77,9 @@ const addComments = function (comments, commentContainer) {
     topRightLike.addEventListener("click", () => {
       axios.put(commentLikeURL).then(() => {
         getComments();
-      });
+      }).catch (function (error) {
+        console.log(error)
+      })
     });
 
     topRight.appendChild(topRightLike);
@@ -111,12 +115,12 @@ const commentURL = "https://project-1-api.herokuapp.com/comments" + apiKey;
 function getComments() {
   axios.get(commentURL).then((response) => {
     const commentArray = response.data;
-
     const sortedCommentArray = commentArray.sort(
-      (a, b) => b.timestamp - a.timestamp
-    );
+      (a, b) => b.timestamp - a.timestamp);
     addComments(sortedCommentArray, commentContainer);
-  });
+  }).catch (function (error) {
+    console.log(error)
+  })
 }
 
 getComments();
@@ -149,10 +153,11 @@ commentForm.addEventListener("submit", function (event) {
     };
     axios.post(commentURL, newComment).then((response) => {
       const commentArray = response.data;
-
       addComments(commentArray, commentContainer);
       getComments();
-    });
+    }).catch (function (error) {
+      console.log(error)
+    })
 
     nameForm.value = "";
     nameForm.classList.remove("new-comment__error");
@@ -161,3 +166,27 @@ commentForm.addEventListener("submit", function (event) {
     commentForm.classList.remove("new-comment__error");
   }
 });
+
+function relativeTime(timestamp){
+  const oneYear = 1000 * 60 * 60 * 24 * 365.25
+  const oneMonth = 1000 * 60 * 60 * 24 * (365.25/12)
+  const oneDay = 1000 * 60 * 60 * 24
+  const oneHour = 1000 * 60 * 60
+  const oneMinute = 1000 * 60
+
+  const timeSince = new Date().getTime() - timestamp
+
+  if (timeSince <= oneMinute) {
+    return "Just now"
+  } else if (timeSince < oneHour) {
+    return Math.round(timeSince/oneMinute) + " minutes ago"
+  } else if (timeSince < oneDay) {
+    return Math.round(timestamp/oneHour) + " hours ago"
+  } else if (timeSince < oneMonth) {
+    return Math.round(timeSince/oneDay) + " days ago"
+  } else if (timeSince < oneYear) {
+    return Math.round(timestamp/oneMonth) + " months ago"
+  } else {
+    return Math.round(timeSince/oneYear) + " years ago"
+  }
+}

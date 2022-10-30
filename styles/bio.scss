@@ -375,24 +375,35 @@
 
   &__top-right {
     display: flex;
+    justify-content: flex-end;
     gap: 0.25rem;
     @include tablet {
       gap: 0.75rem;
+      width: 10rem;
     }
     &--date {
       @include m-body;
       color: $silver;
       @include tablet {
         @include dt-body;
+        // width: 200%;
       }
     }
     &--delete-icon {
       height: 75%;
       width: 75%;
+      @include tablet {
+        height: 1rem;
+        width: 1rem;
+      }
     }
     &--like-icon {
       height: 75%;
       width: 75%;
+      @include tablet {
+        height: 1rem;
+        width: 1rem;
+      }
     }
     &--like-icon-count {
       @include m-body;

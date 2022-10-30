@@ -838,11 +838,13 @@
 }
 .comments-section__top-right {
   display: flex;
+  justify-content: flex-end;
   gap: 0.25rem;
 }
 @media (min-width: 768px) {
   .comments-section__top-right {
     gap: 0.75rem;
+    width: 10rem;
   }
 }
 .comments-section__top-right--date {
@@ -862,9 +864,21 @@
   height: 75%;
   width: 75%;
 }
+@media (min-width: 768px) {
+  .comments-section__top-right--delete-icon {
+    height: 1rem;
+    width: 1rem;
+  }
+}
 .comments-section__top-right--like-icon {
   height: 75%;
   width: 75%;
+}
+@media (min-width: 768px) {
+  .comments-section__top-right--like-icon {
+    height: 1rem;
+    width: 1rem;
+  }
 }
 .comments-section__top-right--like-icon-count {
   font-size: 0.8125rem;

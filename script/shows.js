@@ -101,10 +101,14 @@ const showsURL = "https://project-1-api.herokuapp.com/showdates" + apiKey;
 const showsWrapper = document.querySelector(".show__container");
 
 function getShows() {
-  axios.get(showsURL).then((response) => {
-    const showsArray = response.data;
-    addShow(showsArray, showsWrapper);
-  });
+  axios
+    .get(showsURL)
+    .then((response) => {
+      const showsArray = response.data;
+      addShow(showsArray, showsWrapper);
+    }).catch(function (error) {
+      console.log(error)
+    })
 }
 
 getShows();
