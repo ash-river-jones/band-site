@@ -212,7 +212,6 @@
   }
 
   &__form-wrapper {
-    border-bottom: 1px solid $mercury;
     @include tablet {
       width: 30rem;
     }
@@ -330,6 +329,7 @@
 
   &__container {
     width: 33.25rem;
+    border-top: 1px solid $mercury;
   }
 
   &__comment {

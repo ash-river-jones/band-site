@@ -644,9 +644,6 @@
   border-radius: 2rem;
   margin: 1.375rem 1rem 0 0;
 }
-.new-comment__form-wrapper {
-  border-bottom: 1px solid #e1e1e1;
-}
 @media (min-width: 768px) {
   .new-comment__form-wrapper {
     width: 30rem;
@@ -792,6 +789,7 @@
 }
 .comments-section__container {
   width: 33.25rem;
+  border-top: 1px solid #e1e1e1;
 }
 .comments-section__comment {
   display: flex;
